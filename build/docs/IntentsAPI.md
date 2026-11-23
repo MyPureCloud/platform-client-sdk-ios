@@ -914,4 +914,4 @@ IntentsAPI.postIntentsCustomerintentsBulkRetrieve(body: body) { (response, error
 [**[CustomerIntentResponse]**](CustomerIntentResponse)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

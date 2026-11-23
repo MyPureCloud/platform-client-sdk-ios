@@ -10,7 +10,8 @@
 | **error** | [**ErrorBody**](ErrorBody) | The final error encountered during the test that resulted in test failure | [optional] |
 | **finalResult** | [**JSON**]() | The final result of the test. This is the response that would be returned during normal action execution | [optional] |
 | **success** | **Bool** | Indicates whether or not the test was a success | [optional] |
+| **durationMs** | **Int64** | Total time in milliseconds taken to execute the test | [optional] |
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

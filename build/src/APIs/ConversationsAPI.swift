@@ -421,6 +421,51 @@ open class ConversationsAPI {
 
     
     
+    /**
+     Discard an email draft and reset to initial state
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteConversationsEmailDraft(conversationId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteConversationsEmailDraftWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Discard an email draft and reset to initial state
+     - DELETE /api/v2/conversations/emails/{conversationId}/draft
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter conversationId: (path) conversationId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteConversationsEmailDraftWithRequestBuilder(conversationId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/conversations/emails/{conversationId}/draft"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -782,10 +827,12 @@ open class ConversationsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "createStatus" : "Initiated",
   "version" : 0,
+  "phoneNumberId" : "phoneNumberId",
   "phoneNumber" : "phoneNumber",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "activationErrorInfo" : "{}",
+  "businessPortfolioId" : "businessPortfolioId",
   "name" : "name",
   "supportedContent" : "{}",
   "recipient" : "{}",
@@ -20421,6 +20468,61 @@ open class ConversationsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Conversation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the access attributes on a conversation.
+     
+     - parameter conversationId: (path) conversation ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationAccessattributes(conversationId: String, completion: @escaping ((_ data: ConversationAccessAttributesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationAccessattributesWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<ConversationAccessAttributesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the access attributes on a conversation.
+     - GET /api/v2/conversations/{conversationId}/accessattributes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "accessAttributes" : [ "accessAttributes", "accessAttributes" ]
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) conversation ID 
+
+     - returns: RequestBuilder<ConversationAccessAttributesResponse> 
+     */
+    open class func getConversationAccessattributesWithRequestBuilder(conversationId: String) -> RequestBuilder<ConversationAccessAttributesResponse> {        
+        var path = "/api/v2/conversations/{conversationId}/accessattributes"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConversationAccessAttributesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -51901,9 +52003,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
-  "pageCount" : 2,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -52196,7 +52298,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 1,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -52979,6 +53081,13 @@ open class ConversationsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "textBody" : "textBody",
   "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
   "htmlBody" : "htmlBody",
   "emailSizeBytes" : 0,
   "historyIncluded" : true,
@@ -53285,6 +53394,13 @@ open class ConversationsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "textBody" : "textBody",
   "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
   "htmlBody" : "htmlBody",
   "emailSizeBytes" : 0,
   "historyIncluded" : true,
@@ -54256,9 +54372,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
-  "pageCount" : 2,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -54579,7 +54695,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 1,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -55991,9 +56107,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
-  "pageCount" : 2,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -56534,7 +56650,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 1,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -56737,7 +56853,8 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "id" : "id"
+  "id" : "id",
+  "configurationId" : "configurationId"
 }, statusCode=200}]
 
      - returns: RequestBuilder<FacebookAppCredentials> 
@@ -58691,10 +58808,12 @@ open class ConversationsAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "createStatus" : "Initiated",
     "version" : 0,
+    "phoneNumberId" : "phoneNumberId",
     "phoneNumber" : "phoneNumber",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "activationErrorInfo" : "{}",
+    "businessPortfolioId" : "businessPortfolioId",
     "name" : "name",
     "supportedContent" : "{}",
     "recipient" : "{}",
@@ -58722,10 +58841,12 @@ open class ConversationsAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "createStatus" : "Initiated",
     "version" : 0,
+    "phoneNumberId" : "phoneNumberId",
     "phoneNumber" : "phoneNumber",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "activationErrorInfo" : "{}",
+    "businessPortfolioId" : "businessPortfolioId",
     "name" : "name",
     "supportedContent" : "{}",
     "recipient" : "{}",
@@ -58830,10 +58951,12 @@ open class ConversationsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "createStatus" : "Initiated",
   "version" : 0,
+  "phoneNumberId" : "phoneNumberId",
   "phoneNumber" : "phoneNumber",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "activationErrorInfo" : "{}",
+  "businessPortfolioId" : "businessPortfolioId",
   "name" : "name",
   "supportedContent" : "{}",
   "recipient" : "{}",
@@ -59644,9 +59767,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 2,
-  "pageCount" : 7,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -59939,7 +60062,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 5,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -89330,6 +89453,7 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "scheduleEvaluationResult" : "EvaluatedOpen",
   "callbackIdentifiers" : [ {
     "id" : "id",
     "type" : "ACD"
@@ -117260,6 +117384,131 @@ open class ConversationsAPI {
     
     
     
+    /**
+     Update email draft headers or include message history
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter body: (body) Patch Draft Request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsEmailDraft(conversationId: String, body: PatchDraftRequest, completion: @escaping ((_ data: EmailMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsEmailDraftWithRequestBuilder(conversationId: conversationId, body: body)
+        requestBuilder.execute { (response: Response<EmailMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update email draft headers or include message history
+     - PATCH /api/v2/conversations/emails/{conversationId}/draft
+     - Update email draft recipients (To, CC, BCC), subject, or custom override headers and include message history in the draft. Supports both user context and non-user context (OAuth client credentials). With user context: all operations are supported and the user must be an active participant on the conversation. Without user context: historyIncluded cannot be used.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cc" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "bcc" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "attachments" : [ {
+    "inlineImage" : true,
+    "contentUri" : "contentUri",
+    "name" : "name",
+    "contentLength" : 2,
+    "attachmentId" : "attachmentId",
+    "contentType" : "contentType"
+  }, {
+    "inlineImage" : true,
+    "contentUri" : "contentUri",
+    "name" : "name",
+    "contentLength" : 2,
+    "attachmentId" : "attachmentId",
+    "contentType" : "contentType"
+  } ],
+  "subject" : "subject",
+  "maxEmailSizeBytes" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "textBody" : "textBody",
+  "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
+  "htmlBody" : "htmlBody",
+  "emailSizeBytes" : 0,
+  "historyIncluded" : true,
+  "name" : "name",
+  "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
+  "from" : "{}",
+  "id" : "id",
+  "to" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "time" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Created"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter body: (body) Patch Draft Request 
+
+     - returns: RequestBuilder<EmailMessage> 
+     */
+    open class func patchConversationsEmailDraftWithRequestBuilder(conversationId: String, body: PatchDraftRequest) -> RequestBuilder<EmailMessage> {        
+        var path = "/api/v2/conversations/emails/{conversationId}/draft"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     
@@ -117332,6 +117581,13 @@ open class ConversationsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "textBody" : "textBody",
   "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
   "htmlBody" : "htmlBody",
   "emailSizeBytes" : 0,
   "historyIncluded" : true,
@@ -132216,10 +132472,12 @@ open class ConversationsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "createStatus" : "Initiated",
   "version" : 0,
+  "phoneNumberId" : "phoneNumberId",
   "phoneNumber" : "phoneNumber",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "activationErrorInfo" : "{}",
+  "businessPortfolioId" : "businessPortfolioId",
   "name" : "name",
   "supportedContent" : "{}",
   "recipient" : "{}",
@@ -132304,10 +132562,12 @@ open class ConversationsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "createStatus" : "Initiated",
   "version" : 0,
+  "phoneNumberId" : "phoneNumberId",
   "phoneNumber" : "phoneNumber",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "activationErrorInfo" : "{}",
+  "businessPortfolioId" : "businessPortfolioId",
   "name" : "name",
   "supportedContent" : "{}",
   "recipient" : "{}",
@@ -133329,7 +133589,7 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 6,
+  "totalHits" : 5,
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationMos" : 0.8008281904610115,
@@ -135287,34 +135547,34 @@ open class ConversationsAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 2,
+    "count" : 0,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 2,
+    "count" : 0,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     } ]
   } ]
@@ -179434,6 +179694,7 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "scheduleEvaluationResult" : "EvaluatedOpen",
   "callbackIdentifiers" : [ {
     "id" : "id",
     "type" : "ACD"
@@ -179919,6 +180180,130 @@ open class ConversationsAPI {
     
     
     /**
+     Create and initialize an email draft
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter body: (body) Create Draft Request (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsEmailDraft(conversationId: String, body: CreateDraftRequest? = nil, completion: @escaping ((_ data: EmailMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsEmailDraftWithRequestBuilder(conversationId: conversationId, body: body)
+        requestBuilder.execute { (response: Response<EmailMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create and initialize an email draft
+     - POST /api/v2/conversations/emails/{conversationId}/draft
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cc" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "bcc" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "attachments" : [ {
+    "inlineImage" : true,
+    "contentUri" : "contentUri",
+    "name" : "name",
+    "contentLength" : 2,
+    "attachmentId" : "attachmentId",
+    "contentType" : "contentType"
+  }, {
+    "inlineImage" : true,
+    "contentUri" : "contentUri",
+    "name" : "name",
+    "contentLength" : 2,
+    "attachmentId" : "attachmentId",
+    "contentType" : "contentType"
+  } ],
+  "subject" : "subject",
+  "maxEmailSizeBytes" : 6,
+  "selfUri" : "https://openapi-generator.tech",
+  "textBody" : "textBody",
+  "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
+  "htmlBody" : "htmlBody",
+  "emailSizeBytes" : 0,
+  "historyIncluded" : true,
+  "name" : "name",
+  "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
+  "from" : "{}",
+  "id" : "id",
+  "to" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "time" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Created"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter body: (body) Create Draft Request (optional)
+
+     - returns: RequestBuilder<EmailMessage> 
+     */
+    open class func postConversationsEmailDraftWithRequestBuilder(conversationId: String, body: CreateDraftRequest? = nil) -> RequestBuilder<EmailMessage> {        
+        var path = "/api/v2/conversations/emails/{conversationId}/draft"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
      
      - parameter conversationId: (path) conversationId 
@@ -180327,6 +180712,13 @@ open class ConversationsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "textBody" : "textBody",
   "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
   "htmlBody" : "htmlBody",
   "emailSizeBytes" : 0,
   "historyIncluded" : true,
@@ -183395,10 +183787,12 @@ open class ConversationsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "createStatus" : "Initiated",
   "version" : 0,
+  "phoneNumberId" : "phoneNumberId",
   "phoneNumber" : "phoneNumber",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "activationErrorInfo" : "{}",
+  "businessPortfolioId" : "businessPortfolioId",
   "name" : "name",
   "supportedContent" : "{}",
   "recipient" : "{}",
@@ -183477,10 +183871,12 @@ open class ConversationsAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "createStatus" : "Initiated",
   "version" : 0,
+  "phoneNumberId" : "phoneNumberId",
   "phoneNumber" : "phoneNumber",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "activationErrorInfo" : "{}",
+  "businessPortfolioId" : "businessPortfolioId",
   "name" : "name",
   "supportedContent" : "{}",
   "recipient" : "{}",
@@ -183938,6 +184334,62 @@ open class ConversationsAPI {
         let requestBuilder: RequestBuilder<MeetingIdRecord>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Set the access attributes on a conversation.
+     
+     - parameter conversationId: (path) conversation ID 
+     - parameter body: (body) Conversation Access Attributes 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putConversationAccessattributes(conversationId: String, body: ConversationAccessAttributesUpdate, completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+        let requestBuilder = putConversationAccessattributesWithRequestBuilder(conversationId: conversationId, body: body)
+        requestBuilder.execute { (response: Response<String>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set the access attributes on a conversation.
+     - PUT /api/v2/conversations/{conversationId}/accessattributes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter conversationId: (path) conversation ID 
+     - parameter body: (body) Conversation Access Attributes 
+
+     - returns: RequestBuilder<String> 
+     */
+    open class func putConversationAccessattributesWithRequestBuilder(conversationId: String, body: ConversationAccessAttributesUpdate) -> RequestBuilder<String> {        
+        var path = "/api/v2/conversations/{conversationId}/accessattributes"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     
@@ -184602,6 +185054,13 @@ open class ConversationsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "textBody" : "textBody",
   "draftType" : "Reply",
+  "overrideHeaders" : [ {
+    "value" : "value",
+    "key" : "key"
+  }, {
+    "value" : "value",
+    "key" : "key"
+  } ],
   "htmlBody" : "htmlBody",
   "emailSizeBytes" : 0,
   "historyIncluded" : true,

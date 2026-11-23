@@ -6588,16 +6588,19 @@ open class IntegrationsAPI {
     "success" : true,
     "name" : "name",
     "step" : 0,
-    "error" : "{}"
+    "error" : "{}",
+    "durationMs" : 6
   }, {
     "result" : "{}",
     "success" : true,
     "name" : "name",
     "step" : 0,
-    "error" : "{}"
+    "error" : "{}",
+    "durationMs" : 6
   } ],
   "success" : true,
   "error" : "{}",
+  "durationMs" : 1,
   "finalResult" : "{}"
 }, statusCode=200}]
      
@@ -6732,16 +6735,19 @@ open class IntegrationsAPI {
     "success" : true,
     "name" : "name",
     "step" : 0,
-    "error" : "{}"
+    "error" : "{}",
+    "durationMs" : 6
   }, {
     "result" : "{}",
     "success" : true,
     "name" : "name",
     "step" : 0,
-    "error" : "{}"
+    "error" : "{}",
+    "durationMs" : 6
   } ],
   "success" : true,
   "error" : "{}",
+  "durationMs" : 1,
   "finalResult" : "{}"
 }, statusCode=200}]
      

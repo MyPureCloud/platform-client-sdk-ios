@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAnalyticsActionsAggregatesJob**](AnalyticsAPI#deleteAnalyticsActionsAggregatesJob) | Delete/cancel an async request for action aggregates |
 | [**deleteAnalyticsAgentcopilotsAggregatesJob**](AnalyticsAPI#deleteAnalyticsAgentcopilotsAggregatesJob) | Delete/cancel an async request for agent copilot aggregates |
+| [**deleteAnalyticsAgenticvirtualagentsAggregatesJob**](AnalyticsAPI#deleteAnalyticsAgenticvirtualagentsAggregatesJob) | Delete/cancel an async request for agentic virtual agent aggregates |
 | [**deleteAnalyticsBotsAggregatesJob**](AnalyticsAPI#deleteAnalyticsBotsAggregatesJob) | Delete/cancel an async request for bot aggregates |
 | [**deleteAnalyticsCasemanagementAggregatesJob**](AnalyticsAPI#deleteAnalyticsCasemanagementAggregatesJob) | Delete/cancel an async request for case management aggregates |
 | [**deleteAnalyticsConversationsAggregatesJob**](AnalyticsAPI#deleteAnalyticsConversationsAggregatesJob) | Delete/cancel an async request for conversation aggregates |
@@ -16,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAnalyticsFlowsAggregatesJob**](AnalyticsAPI#deleteAnalyticsFlowsAggregatesJob) | Delete/cancel an async request for flow aggregates |
 | [**deleteAnalyticsJourneysAggregatesJob**](AnalyticsAPI#deleteAnalyticsJourneysAggregatesJob) | Delete/cancel an async request for journey aggregates |
 | [**deleteAnalyticsKnowledgeAggregatesJob**](AnalyticsAPI#deleteAnalyticsKnowledgeAggregatesJob) | Delete/cancel an async request for knowledge aggregates |
+| [**deleteAnalyticsKpiattributionsAggregatesJob**](AnalyticsAPI#deleteAnalyticsKpiattributionsAggregatesJob) | Delete/cancel an async request for KPI attribution aggregates |
 | [**deleteAnalyticsResolutionsAggregatesJob**](AnalyticsAPI#deleteAnalyticsResolutionsAggregatesJob) | Delete/cancel an async request for resolution aggregates |
 | [**deleteAnalyticsSummariesAggregatesJob**](AnalyticsAPI#deleteAnalyticsSummariesAggregatesJob) | Delete/cancel an async request for summary aggregates |
 | [**deleteAnalyticsSurveysAggregatesJob**](AnalyticsAPI#deleteAnalyticsSurveysAggregatesJob) | Delete/cancel an async request for survey aggregates |
@@ -28,6 +30,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsAgentStatus**](AnalyticsAPI#getAnalyticsAgentStatus) | Get an agent and their active sessions by user ID |
 | [**getAnalyticsAgentcopilotsAggregatesJob**](AnalyticsAPI#getAnalyticsAgentcopilotsAggregatesJob) | Get status for async query for agent copilot aggregates |
 | [**getAnalyticsAgentcopilotsAggregatesJobResults**](AnalyticsAPI#getAnalyticsAgentcopilotsAggregatesJobResults) | Fetch a page of results for an async aggregates query |
+| [**getAnalyticsAgenticvirtualagentsAggregatesJob**](AnalyticsAPI#getAnalyticsAgenticvirtualagentsAggregatesJob) | Get status for async query for agentic virtual agent aggregates |
+| [**getAnalyticsAgenticvirtualagentsAggregatesJobResults**](AnalyticsAPI#getAnalyticsAgenticvirtualagentsAggregatesJobResults) | Fetch a page of results for an async agentic virtual agent aggregates query |
 | [**getAnalyticsBotflowDivisionsReportingturns**](AnalyticsAPI#getAnalyticsBotflowDivisionsReportingturns) | Get Reporting Turns (division aware). |
 | [**getAnalyticsBotflowReportingturns**](AnalyticsAPI#getAnalyticsBotflowReportingturns) | Get Reporting Turns. |
 | [**getAnalyticsBotflowSessions**](AnalyticsAPI#getAnalyticsBotflowSessions) | Get Bot Flow Sessions. |
@@ -57,6 +61,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsJourneysAggregatesJobResults**](AnalyticsAPI#getAnalyticsJourneysAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getAnalyticsKnowledgeAggregatesJob**](AnalyticsAPI#getAnalyticsKnowledgeAggregatesJob) | Get status for async query for knowledge aggregates |
 | [**getAnalyticsKnowledgeAggregatesJobResults**](AnalyticsAPI#getAnalyticsKnowledgeAggregatesJobResults) | Fetch a page of results for an async aggregates query |
+| [**getAnalyticsKpiattributionsAggregatesJob**](AnalyticsAPI#getAnalyticsKpiattributionsAggregatesJob) | Get status for async query for KPI attribution aggregates |
+| [**getAnalyticsKpiattributionsAggregatesJobResults**](AnalyticsAPI#getAnalyticsKpiattributionsAggregatesJobResults) | Fetch a page of results for an async KPI attribution aggregates query |
 | [**getAnalyticsReportingDashboardsUser**](AnalyticsAPI#getAnalyticsReportingDashboardsUser) | Get dashboards summary for a user |
 | [**getAnalyticsReportingDashboardsUsers**](AnalyticsAPI#getAnalyticsReportingDashboardsUsers) | Get dashboards summary for users in a org |
 | [**getAnalyticsReportingExports**](AnalyticsAPI#getAnalyticsReportingExports) | Get all view export requests for a user |
@@ -84,6 +90,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
 | [**postAnalyticsAgentcopilotsAggregatesJobs**](AnalyticsAPI#postAnalyticsAgentcopilotsAggregatesJobs) | Query for agent copilot aggregates asynchronously |
 | [**postAnalyticsAgentcopilotsAggregatesQuery**](AnalyticsAPI#postAnalyticsAgentcopilotsAggregatesQuery) | Query for agent copilot aggregates |
+| [**postAnalyticsAgenticvirtualagentsAggregatesJobs**](AnalyticsAPI#postAnalyticsAgenticvirtualagentsAggregatesJobs) | Query for agentic virtual agent aggregates asynchronously |
+| [**postAnalyticsAgenticvirtualagentsAggregatesQuery**](AnalyticsAPI#postAnalyticsAgenticvirtualagentsAggregatesQuery) | Query for agentic virtual agent aggregates |
 | [**postAnalyticsAgentsStatusCounts**](AnalyticsAPI#postAnalyticsAgentsStatusCounts) | Count agents by different groupings |
 | [**postAnalyticsAgentsStatusQuery**](AnalyticsAPI#postAnalyticsAgentsStatusQuery) | Retrieve the top 50 agents matching the query filters |
 | [**postAnalyticsBotsAggregatesJobs**](AnalyticsAPI#postAnalyticsBotsAggregatesJobs) | Query for bot aggregates asynchronously |
@@ -111,6 +119,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postAnalyticsKnowledgeAggregatesJobs**](AnalyticsAPI#postAnalyticsKnowledgeAggregatesJobs) | Query for knowledge aggregates asynchronously |
 | [**postAnalyticsKnowledgeAggregatesQuery**](AnalyticsAPI#postAnalyticsKnowledgeAggregatesQuery) | Query for knowledge aggregates |
+| [**postAnalyticsKpiattributionsAggregatesJobs**](AnalyticsAPI#postAnalyticsKpiattributionsAggregatesJobs) | Query for KPI attribution aggregates asynchronously |
+| [**postAnalyticsKpiattributionsAggregatesQuery**](AnalyticsAPI#postAnalyticsKpiattributionsAggregatesQuery) | Query for KPI attribution aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
 | [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate. |
 | [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk soft delete dashboards owned by other user(s) |
@@ -222,6 +232,55 @@ AnalyticsAPI.deleteAnalyticsAgentcopilotsAggregatesJob(jobId: jobId) { (error) i
         dump(error)
     } else {
         print("AnalyticsAPI.deleteAnalyticsAgentcopilotsAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteAnalyticsAgenticvirtualagentsAggregatesJob
+
+
+
+> Void deleteAnalyticsAgenticvirtualagentsAggregatesJob(jobId)
+
+Delete/cancel an async request for agentic virtual agent aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/agenticvirtualagents/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:agenticVirtualAgentAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.deleteAnalyticsAgenticvirtualagentsAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.deleteAnalyticsAgenticvirtualagentsAggregatesJob was successful")
     }
 }
 ```
@@ -713,6 +772,55 @@ AnalyticsAPI.deleteAnalyticsKnowledgeAggregatesJob(jobId: jobId) { (error) in
         dump(error)
     } else {
         print("AnalyticsAPI.deleteAnalyticsKnowledgeAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteAnalyticsKpiattributionsAggregatesJob
+
+
+
+> Void deleteAnalyticsKpiattributionsAggregatesJob(jobId)
+
+Delete/cancel an async request for KPI attribution aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/kpiattributions/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:customKpiAttributionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.deleteAnalyticsKpiattributionsAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.deleteAnalyticsKpiattributionsAggregatesJob was successful")
     }
 }
 ```
@@ -1327,6 +1435,108 @@ AnalyticsAPI.getAnalyticsAgentcopilotsAggregatesJobResults(jobId: jobId, cursor:
 ### Return type
 
 [**AgentCopilotAsyncAggregateQueryResponse**](AgentCopilotAsyncAggregateQueryResponse)
+
+
+## getAnalyticsAgenticvirtualagentsAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsAgenticvirtualagentsAggregatesJob(jobId)
+
+Get status for async query for agentic virtual agent aggregates
+
+
+
+Wraps GET /api/v2/analytics/agenticvirtualagents/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:agenticVirtualAgentAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.getAnalyticsAgenticvirtualagentsAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsAgenticvirtualagentsAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsAgenticvirtualagentsAggregatesJobResults
+
+
+
+> [AgenticVirtualAgentAsyncAggregateQueryResponse](AgenticVirtualAgentAsyncAggregateQueryResponse) getAnalyticsAgenticvirtualagentsAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async agentic virtual agent aggregates query
+
+
+
+Wraps GET /api/v2/analytics/agenticvirtualagents/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:agenticVirtualAgentAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+AnalyticsAPI.getAnalyticsAgenticvirtualagentsAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsAgenticvirtualagentsAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**AgenticVirtualAgentAsyncAggregateQueryResponse**](AgenticVirtualAgentAsyncAggregateQueryResponse)
 
 
 ## getAnalyticsBotflowDivisionsReportingturns
@@ -2850,6 +3060,108 @@ AnalyticsAPI.getAnalyticsKnowledgeAggregatesJobResults(jobId: jobId, cursor: cur
 [**KnowledgeAsyncAggregateQueryResponse**](KnowledgeAsyncAggregateQueryResponse)
 
 
+## getAnalyticsKpiattributionsAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsKpiattributionsAggregatesJob(jobId)
+
+Get status for async query for KPI attribution aggregates
+
+
+
+Wraps GET /api/v2/analytics/kpiattributions/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:customKpiAttributionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.getAnalyticsKpiattributionsAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsKpiattributionsAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsKpiattributionsAggregatesJobResults
+
+
+
+> [KpiAttributionAsyncAggregateQueryResponse](KpiAttributionAsyncAggregateQueryResponse) getAnalyticsKpiattributionsAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async KPI attribution aggregates query
+
+
+
+Wraps GET /api/v2/analytics/kpiattributions/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:customKpiAttributionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+AnalyticsAPI.getAnalyticsKpiattributionsAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsKpiattributionsAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**KpiAttributionAsyncAggregateQueryResponse**](KpiAttributionAsyncAggregateQueryResponse)
+
+
 ## getAnalyticsReportingDashboardsUser
 
 
@@ -4243,6 +4555,106 @@ AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesQuery(body: body) { (response, 
 [**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse)
 
 
+## postAnalyticsAgenticvirtualagentsAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsAgenticvirtualagentsAggregatesJobs(body)
+
+Query for agentic virtual agent aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/agenticvirtualagents/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:agenticVirtualAgentAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: AgenticVirtualAgentAsyncAggregationQuery = new AgenticVirtualAgentAsyncAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsAgenticvirtualagentsAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsAgenticvirtualagentsAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgenticVirtualAgentAsyncAggregationQuery**](AgenticVirtualAgentAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
+## postAnalyticsAgenticvirtualagentsAggregatesQuery
+
+
+
+> [AgenticVirtualAgentAggregateQueryResponse](AgenticVirtualAgentAggregateQueryResponse) postAnalyticsAgenticvirtualagentsAggregatesQuery(body)
+
+Query for agentic virtual agent aggregates
+
+
+
+Wraps POST /api/v2/analytics/agenticvirtualagents/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:agenticVirtualAgentAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: AgenticVirtualAgentAggregationQuery = new AgenticVirtualAgentAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsAgenticvirtualagentsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsAgenticvirtualagentsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgenticVirtualAgentAggregationQuery**](AgenticVirtualAgentAggregationQuery)| query | |
+
+
+### Return type
+
+[**AgenticVirtualAgentAggregateQueryResponse**](AgenticVirtualAgentAggregateQueryResponse)
+
+
 ## postAnalyticsAgentsStatusCounts
 
 
@@ -5609,6 +6021,106 @@ AnalyticsAPI.postAnalyticsKnowledgeAggregatesQuery(body: body) { (response, erro
 [**KnowledgeAggregateQueryResponse**](KnowledgeAggregateQueryResponse)
 
 
+## postAnalyticsKpiattributionsAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsKpiattributionsAggregatesJobs(body)
+
+Query for KPI attribution aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/kpiattributions/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:customKpiAttributionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: KpiAttributionAsyncAggregationQuery = new KpiAttributionAsyncAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsKpiattributionsAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsKpiattributionsAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**KpiAttributionAsyncAggregationQuery**](KpiAttributionAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
+## postAnalyticsKpiattributionsAggregatesQuery
+
+
+
+> [KpiAttributionAggregateQueryResponse](KpiAttributionAggregateQueryResponse) postAnalyticsKpiattributionsAggregatesQuery(body)
+
+Query for KPI attribution aggregates
+
+
+
+Wraps POST /api/v2/analytics/kpiattributions/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:customKpiAttributionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: KpiAttributionAggregationQuery = new KpiAttributionAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsKpiattributionsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsKpiattributionsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**KpiAttributionAggregationQuery**](KpiAttributionAggregationQuery)| query | |
+
+
+### Return type
+
+[**KpiAttributionAggregateQueryResponse**](KpiAttributionAggregateQueryResponse)
+
+
 ## postAnalyticsQueuesObservationsQuery
 
 
@@ -6928,4 +7440,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

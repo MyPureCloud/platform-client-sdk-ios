@@ -189,6 +189,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequest) | Get a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequestWaitlistpositions) | Get the daily waitlist positions of a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequests) | Get a list of time off requests for the current user |
+| [**getWorkforcemanagementTimeoffrequestsEvaluateJob**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequestsEvaluateJob) | Query the status of time-off request evaluation job operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementUnavailabletimesSettings**](WorkforceManagementAPI#getWorkforcemanagementUnavailabletimesSettings) | Get availability management unit&#39;s settings for agent |
 | [**getWorkforcemanagementUnavailabletimesValidationJob**](WorkforceManagementAPI#getWorkforcemanagementUnavailabletimesValidationJob) | Query agent unavailable times validation job |
 | [**getWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI#getWorkforcemanagementUserWorkplanbidranks) | Get work plan bid ranks for a user |
@@ -238,6 +239,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
 | [**patchWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitWorkplanrotation) | Update a work plan rotation |
 | [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
+| [**patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus**](WorkforceManagementAPI#patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus) | Update status of time-off request evaluation job operation |
 | [**patchWorkforcemanagementUnavailabletimes**](WorkforceManagementAPI#patchWorkforcemanagementUnavailabletimes) | Update agent unavailable times |
 | [**patchWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI#patchWorkforcemanagementUserWorkplanbidranks) | Update work plan bid ranks for a user |
 | [**patchWorkforcemanagementUsersWorkplanbidranksBulk**](WorkforceManagementAPI#patchWorkforcemanagementUsersWorkplanbidranksBulk) | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
@@ -356,6 +358,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunitTimeofflimitsValuesQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeofflimitsValuesQuery) | Retrieves time off limit related values based on a given set of filters. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query instead |
 | [**postWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffplans) | Creates a new time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans instead |
 | [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs) | Evaluate a list of time-off requests for auto-approval |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of time off requests |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Fetches time off requests matching the conditions specified in the request body |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery) | Retrieves daily waitlist position for a list of time off requests |
@@ -10421,6 +10424,57 @@ This endpoint does not require any parameters.
 [**TimeOffRequestList**](TimeOffRequestList)
 
 
+## getWorkforcemanagementTimeoffrequestsEvaluateJob
+
+
+
+> [EvaluateTimeOffResponse](EvaluateTimeOffResponse) getWorkforcemanagementTimeoffrequestsEvaluateJob(jobId)
+
+Query the status of time-off request evaluation job operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/timeoffrequests/evaluate/jobs/{jobId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // The job id.
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementTimeoffrequestsEvaluateJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementTimeoffrequestsEvaluateJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The job id. | |
+
+
+### Return type
+
+[**EvaluateTimeOffResponse**](EvaluateTimeOffResponse)
+
+
 ## getWorkforcemanagementUnavailabletimesSettings
 
 
@@ -13024,6 +13078,59 @@ WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequest(timeOffRequestId: 
 ### Return type
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse)
+
+
+## patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus
+
+
+
+> [EvaluateTimeOffJobResponse](EvaluateTimeOffJobResponse) patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus(jobId, body)
+
+Update status of time-off request evaluation job operation
+
+This endpoint acknowledges the cancellation request, but does not wait for the job to stop. A successful response only indicates that the cancellation has been requested. The job may continue running until it reaches a cancellation point and terminates
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/timeoffrequests/evaluate/jobs/{jobId}/status  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // The job id.
+let body: UpdateEvaluateTimeOffJobStatus = new UpdateEvaluateTimeOffJobStatus(...) // The request body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus(jobId: jobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The job id. | |
+| **body** | [**UpdateEvaluateTimeOffJobStatus**](UpdateEvaluateTimeOffJobStatus)| The request body | |
+
+
+### Return type
+
+[**EvaluateTimeOffJobResponse**](EvaluateTimeOffJobResponse)
 
 
 ## patchWorkforcemanagementUnavailabletimes
@@ -19355,6 +19462,58 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 [**TimeOffRequestList**](TimeOffRequestList)
 
 
+## postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs
+
+
+
+> [EvaluateTimeOffJobResponse](EvaluateTimeOffJobResponse) postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs(managementUnitId, body)
+
+Evaluate a list of time-off requests for auto-approval
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/evaluate/jobs  
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let managementUnitId: String = "" // The ID of the management unit.
+let body: EvaluateTimeOffRequest = new EvaluateTimeOffRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit. | |
+| **body** | [**EvaluateTimeOffRequest**](EvaluateTimeOffRequest)| body | |
+
+
+### Return type
+
+[**EvaluateTimeOffJobResponse**](EvaluateTimeOffJobResponse)
+
+
 ## postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery
 
 
@@ -21426,4 +21585,4 @@ WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId,
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

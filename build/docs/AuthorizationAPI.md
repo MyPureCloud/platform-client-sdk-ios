@@ -4,10 +4,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAuthorizationCustomattributesItemtype**](AuthorizationAPI#deleteAuthorizationCustomattributesItemtype) | Delete the default search criteria for an itemType. |
 | [**deleteAuthorizationDivision**](AuthorizationAPI#deleteAuthorizationDivision) | Delete a division. |
 | [**deleteAuthorizationPoliciesTargetSubjectSubjectId**](AuthorizationAPI#deleteAuthorizationPoliciesTargetSubjectSubjectId) | Delete an access control policy |
 | [**deleteAuthorizationRole**](AuthorizationAPI#deleteAuthorizationRole) | Delete an organization role. |
 | [**deleteAuthorizationSubjectDivisionRole**](AuthorizationAPI#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
+| [**getAuthorizationCustomattributesItemtype**](AuthorizationAPI#getAuthorizationCustomattributesItemtype) | Get the default search criteria for an itemType. |
 | [**getAuthorizationDivision**](AuthorizationAPI#getAuthorizationDivision) | Returns an authorization division. |
 | [**getAuthorizationDivisionGrants**](AuthorizationAPI#getAuthorizationDivisionGrants) | Gets all grants for a given division. |
 | [**getAuthorizationDivisions**](AuthorizationAPI#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
@@ -40,6 +42,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoles**](AuthorizationAPI#getUserRoles) | Returns a listing of roles and permissions for a user. |
 | [**patchAuthorizationRole**](AuthorizationAPI#patchAuthorizationRole) | Patch Organization Role for needsUpdate Field |
 | [**patchAuthorizationSettings**](AuthorizationAPI#patchAuthorizationSettings) | Change authorization settings |
+| [**postAuthorizationCustomattributesItemtype**](AuthorizationAPI#postAuthorizationCustomattributesItemtype) | Add a new default search criteria for an itemType. |
 | [**postAuthorizationDivisionObject**](AuthorizationAPI#postAuthorizationDivisionObject) | Assign a list of objects to a division |
 | [**postAuthorizationDivisionRestore**](AuthorizationAPI#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](AuthorizationAPI#postAuthorizationDivisions) | Create a division. |
@@ -54,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationSubjectBulkremove**](AuthorizationAPI#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
 | [**postAuthorizationSubjectBulkreplace**](AuthorizationAPI#postAuthorizationSubjectBulkreplace) | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**postAuthorizationSubjectDivisionRole**](AuthorizationAPI#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
+| [**postAuthorizationSubjectDivisionsQuery**](AuthorizationAPI#postAuthorizationSubjectDivisionsQuery) | Gets all divisions for a particular user in an org. |
 | [**putAuthorizationDivision**](AuthorizationAPI#putAuthorizationDivision) | Update a division. |
 | [**putAuthorizationPoliciesTarget**](AuthorizationAPI#putAuthorizationPoliciesTarget) | Add an access control policy for a specified resource target and subject, overwriting any existing policy |
 | [**putAuthorizationPolicy**](AuthorizationAPI#putAuthorizationPolicy) | Update an access control policy with a given ID |
@@ -64,6 +68,55 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putAuthorizationRolesSettings**](AuthorizationAPI#putAuthorizationRolesSettings) | Change authorization role settings |
 | [**putUserRoles**](AuthorizationAPI#putUserRoles) | Sets the user&#39;s roles |
 {: class="table-striped"}
+
+
+## deleteAuthorizationCustomattributesItemtype
+
+
+
+> Void deleteAuthorizationCustomattributesItemtype(itemType)
+
+Delete the default search criteria for an itemType.
+
+
+
+Wraps DELETE /api/v2/authorization/customattributes/itemtypes/{itemType}  
+
+Requires ANY permissions: 
+
+* authorization:defaultSearchCriteria:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let itemType: AuthorizationAPI.ItemType_deleteAuthorizationCustomattributesItemtype = AuthorizationAPI.ItemType_deleteAuthorizationCustomattributesItemtype.enummember // Item Type
+
+// Code example
+AuthorizationAPI.deleteAuthorizationCustomattributesItemtype(itemType: itemType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AuthorizationAPI.deleteAuthorizationCustomattributesItemtype was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **itemType** | **String**| Item Type |<br />**Values**: conversation ("conversation"), transcript ("transcript"), evaluation ("evaluation"), workitem ("workitem") |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteAuthorizationDivision
@@ -268,6 +321,56 @@ AuthorizationAPI.deleteAuthorizationSubjectDivisionRole(subjectId: subjectId, di
 ### Return type
 
 `nil` (empty response body)
+
+
+## getAuthorizationCustomattributesItemtype
+
+
+
+> [AuthzDefaultSearchResponse](AuthzDefaultSearchResponse) getAuthorizationCustomattributesItemtype(itemType)
+
+Get the default search criteria for an itemType.
+
+
+
+Wraps GET /api/v2/authorization/customattributes/itemtypes/{itemType}  
+
+Requires ANY permissions: 
+
+* authorization:defaultSearchCriteria:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let itemType: AuthorizationAPI.ItemType_getAuthorizationCustomattributesItemtype = AuthorizationAPI.ItemType_getAuthorizationCustomattributesItemtype.enummember // Item Type
+
+// Code example
+AuthorizationAPI.getAuthorizationCustomattributesItemtype(itemType: itemType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationCustomattributesItemtype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **itemType** | **String**| Item Type |<br />**Values**: conversation ("conversation"), transcript ("transcript"), evaluation ("evaluation"), workitem ("workitem") |
+
+
+### Return type
+
+[**AuthzDefaultSearchResponse**](AuthzDefaultSearchResponse)
 
 
 ## getAuthorizationDivision
@@ -1977,6 +2080,58 @@ AuthorizationAPI.patchAuthorizationSettings(body: body) { (response, error) in
 [**AuthorizationSettings**](AuthorizationSettings)
 
 
+## postAuthorizationCustomattributesItemtype
+
+
+
+> [AuthzDefaultSearchResponse](AuthzDefaultSearchResponse) postAuthorizationCustomattributesItemtype(itemType, body)
+
+Add a new default search criteria for an itemType.
+
+
+
+Wraps POST /api/v2/authorization/customattributes/itemtypes/{itemType}  
+
+Requires ANY permissions: 
+
+* authorization:defaultSearchCriteria:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let itemType: AuthorizationAPI.ItemType_postAuthorizationCustomattributesItemtype = AuthorizationAPI.ItemType_postAuthorizationCustomattributesItemtype.enummember // Item Type
+let body: AuthzDefaultSearchRequest = new AuthzDefaultSearchRequest(...) // The custom attribute meta data object
+
+// Code example
+AuthorizationAPI.postAuthorizationCustomattributesItemtype(itemType: itemType, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.postAuthorizationCustomattributesItemtype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **itemType** | **String**| Item Type |<br />**Values**: conversation ("conversation"), transcript ("transcript"), evaluation ("evaluation"), workitem ("workitem") |
+| **body** | [**AuthzDefaultSearchRequest**](AuthzDefaultSearchRequest)| The custom attribute meta data object | |
+
+
+### Return type
+
+[**AuthzDefaultSearchResponse**](AuthzDefaultSearchResponse)
+
+
 ## postAuthorizationDivisionObject
 
 
@@ -2718,6 +2873,58 @@ AuthorizationAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divi
 `nil` (empty response body)
 
 
+## postAuthorizationSubjectDivisionsQuery
+
+
+
+> [DomainUserDivisionsResultListing](DomainUserDivisionsResultListing) postAuthorizationSubjectDivisionsQuery(subjectId, body)
+
+Gets all divisions for a particular user in an org.
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/divisions/query  
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: [String] = [""] // DivisionPermissionQuery
+
+// Code example
+AuthorizationAPI.postAuthorizationSubjectDivisionsQuery(subjectId: subjectId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.postAuthorizationSubjectDivisionsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **body** | [**[String]**](String)| DivisionPermissionQuery | |
+
+
+### Return type
+
+[**DomainUserDivisionsResultListing**](DomainUserDivisionsResultListing)
+
+
 ## putAuthorizationDivision
 
 
@@ -3192,4 +3399,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

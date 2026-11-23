@@ -11,6 +11,58 @@ import Foundation
 
 open class AuthorizationAPI {
     
+    public enum ItemType_deleteAuthorizationCustomattributesItemtype: String { 
+        case conversation = "conversation"
+        case transcript = "transcript"
+        case evaluation = "evaluation"
+        case workitem = "workitem"
+    }
+    
+    
+    /**
+     Delete the default search criteria for an itemType.
+     
+     - parameter itemType: (path) Item Type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAuthorizationCustomattributesItemtype(itemType: ItemType_deleteAuthorizationCustomattributesItemtype, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAuthorizationCustomattributesItemtypeWithRequestBuilder(itemType: itemType)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete the default search criteria for an itemType.
+     - DELETE /api/v2/authorization/customattributes/itemtypes/{itemType}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter itemType: (path) Item Type 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAuthorizationCustomattributesItemtypeWithRequestBuilder(itemType: ItemType_deleteAuthorizationCustomattributesItemtype) -> RequestBuilder<Void> {        
+        var path = "/api/v2/authorization/customattributes/itemtypes/{itemType}"
+        let itemTypePreEscape = "\(itemType.rawValue)"
+        let itemTypePostEscape = itemTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{itemType}", with: itemTypePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
     
     
     
@@ -216,6 +268,70 @@ open class AuthorizationAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    public enum ItemType_getAuthorizationCustomattributesItemtype: String { 
+        case conversation = "conversation"
+        case transcript = "transcript"
+        case evaluation = "evaluation"
+        case workitem = "workitem"
+    }
+    
+    
+    /**
+     Get the default search criteria for an itemType.
+     
+     - parameter itemType: (path) Item Type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationCustomattributesItemtype(itemType: ItemType_getAuthorizationCustomattributesItemtype, completion: @escaping ((_ data: AuthzDefaultSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationCustomattributesItemtypeWithRequestBuilder(itemType: itemType)
+        requestBuilder.execute { (response: Response<AuthzDefaultSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the default search criteria for an itemType.
+     - GET /api/v2/authorization/customattributes/itemtypes/{itemType}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "itemType" : "Conversation",
+  "attributeName" : "attributeName"
+}, statusCode=200}]
+     
+     - parameter itemType: (path) Item Type 
+
+     - returns: RequestBuilder<AuthzDefaultSearchResponse> 
+     */
+    open class func getAuthorizationCustomattributesItemtypeWithRequestBuilder(itemType: ItemType_getAuthorizationCustomattributesItemtype) -> RequestBuilder<AuthzDefaultSearchResponse> {        
+        var path = "/api/v2/authorization/customattributes/itemtypes/{itemType}"
+        let itemTypePreEscape = "\(itemType.rawValue)"
+        let itemTypePostEscape = itemTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{itemType}", with: itemTypePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthzDefaultSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -29162,6 +29278,74 @@ open class AuthorizationAPI {
     }
 
     
+    public enum ItemType_postAuthorizationCustomattributesItemtype: String { 
+        case conversation = "conversation"
+        case transcript = "transcript"
+        case evaluation = "evaluation"
+        case workitem = "workitem"
+    }
+    
+    
+    
+    
+    /**
+     Add a new default search criteria for an itemType.
+     
+     - parameter itemType: (path) Item Type 
+     - parameter body: (body) The custom attribute meta data object 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationCustomattributesItemtype(itemType: ItemType_postAuthorizationCustomattributesItemtype, body: AuthzDefaultSearchRequest, completion: @escaping ((_ data: AuthzDefaultSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationCustomattributesItemtypeWithRequestBuilder(itemType: itemType, body: body)
+        requestBuilder.execute { (response: Response<AuthzDefaultSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a new default search criteria for an itemType.
+     - POST /api/v2/authorization/customattributes/itemtypes/{itemType}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "itemType" : "Conversation",
+  "attributeName" : "attributeName"
+}, statusCode=200}]
+     
+     - parameter itemType: (path) Item Type 
+     - parameter body: (body) The custom attribute meta data object 
+
+     - returns: RequestBuilder<AuthzDefaultSearchResponse> 
+     */
+    open class func postAuthorizationCustomattributesItemtypeWithRequestBuilder(itemType: ItemType_postAuthorizationCustomattributesItemtype, body: AuthzDefaultSearchRequest) -> RequestBuilder<AuthzDefaultSearchResponse> {        
+        var path = "/api/v2/authorization/customattributes/itemtypes/{itemType}"
+        let itemTypePreEscape = "\(itemType.rawValue)"
+        let itemTypePostEscape = itemTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{itemType}", with: itemTypePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthzDefaultSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
     
     
     public enum ObjectType_postAuthorizationDivisionObject: String { 
@@ -53321,6 +53505,86 @@ open class AuthorizationAPI {
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets all divisions for a particular user in an org.
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) DivisionPermissionQuery 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationSubjectDivisionsQuery(subjectId: String, body: [String], completion: @escaping ((_ data: DomainUserDivisionsResultListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationSubjectDivisionsQueryWithRequestBuilder(subjectId: subjectId, body: body)
+        requestBuilder.execute { (response: Response<DomainUserDivisionsResultListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets all divisions for a particular user in an org.
+     - POST /api/v2/authorization/subjects/{subjectId}/divisions/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "permission" : "permission",
+    "id" : "id",
+    "divisions" : [ "divisions", "divisions" ]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "permission" : "permission",
+    "id" : "id",
+    "divisions" : [ "divisions", "divisions" ]
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) DivisionPermissionQuery 
+
+     - returns: RequestBuilder<DomainUserDivisionsResultListing> 
+     */
+    open class func postAuthorizationSubjectDivisionsQueryWithRequestBuilder(subjectId: String, body: [String]) -> RequestBuilder<DomainUserDivisionsResultListing> {        
+        var path = "/api/v2/authorization/subjects/{subjectId}/divisions/query"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DomainUserDivisionsResultListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

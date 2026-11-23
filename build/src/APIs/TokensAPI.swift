@@ -148,6 +148,7 @@ open class TokensAPI {
   "dateTokenIdles" : "2000-01-23T04:56:07.000+00:00",
   "organization" : "{}",
   "homeOrganization" : "{}",
+  "amr" : [ "amr", "amr" ],
   "authorizedScope" : [ "authorizedScope", "authorizedScope" ],
   "clonedUser" : "{}"
 }, statusCode=200}]

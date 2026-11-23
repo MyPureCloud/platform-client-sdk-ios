@@ -15440,6 +15440,66 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Query the status of time-off request evaluation job operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The job id. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementTimeoffrequestsEvaluateJob(jobId: String, completion: @escaping ((_ data: EvaluateTimeOffResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementTimeoffrequestsEvaluateJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<EvaluateTimeOffResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of time-off request evaluation job operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/timeoffrequests/evaluate/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Canceled"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The job id. 
+
+     - returns: RequestBuilder<EvaluateTimeOffResponse> 
+     */
+    open class func getWorkforcemanagementTimeoffrequestsEvaluateJobWithRequestBuilder(jobId: String) -> RequestBuilder<EvaluateTimeOffResponse> {        
+        var path = "/api/v2/workforcemanagement/timeoffrequests/evaluate/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EvaluateTimeOffResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Get availability management unit's settings for agent
      
@@ -19488,6 +19548,66 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update status of time-off request evaluation job operation
+     
+     - parameter jobId: (path) The job id. 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementTimeoffrequestsEvaluateJobStatus(jobId: String, body: UpdateEvaluateTimeOffJobStatus, completion: @escaping ((_ data: EvaluateTimeOffJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementTimeoffrequestsEvaluateJobStatusWithRequestBuilder(jobId: jobId, body: body)
+        requestBuilder.execute { (response: Response<EvaluateTimeOffJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update status of time-off request evaluation job operation
+     - PATCH /api/v2/workforcemanagement/timeoffrequests/evaluate/jobs/{jobId}/status
+     - This endpoint acknowledges the cancellation request, but does not wait for the job to stop. A successful response only indicates that the cancellation has been requested. The job may continue running until it reaches a cancellation point and terminates
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The job id. 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<EvaluateTimeOffJobResponse> 
+     */
+    open class func patchWorkforcemanagementTimeoffrequestsEvaluateJobStatusWithRequestBuilder(jobId: String, body: UpdateEvaluateTimeOffJobStatus) -> RequestBuilder<EvaluateTimeOffJobResponse> {        
+        var path = "/api/v2/workforcemanagement/timeoffrequests/evaluate/jobs/{jobId}/status"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EvaluateTimeOffJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -28522,6 +28642,65 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Evaluate a list of time-off requests for auto-approval
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobs(managementUnitId: String, body: EvaluateTimeOffRequest, completion: @escaping ((_ data: EvaluateTimeOffJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<EvaluateTimeOffJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Evaluate a list of time-off requests for auto-approval
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/evaluate/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit. 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<EvaluateTimeOffJobResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsEvaluateJobsWithRequestBuilder(managementUnitId: String, body: EvaluateTimeOffRequest) -> RequestBuilder<EvaluateTimeOffJobResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/evaluate/jobs"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EvaluateTimeOffJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

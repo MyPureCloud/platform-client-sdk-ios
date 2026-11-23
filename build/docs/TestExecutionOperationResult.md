@@ -11,7 +11,8 @@
 | **success** | **Bool** | Indicated whether or not the operation was successful | [optional] |
 | **result** | [**JSON**]() | The result of the operation | [optional] |
 | **error** | [**ErrorBody**](ErrorBody) | Error that occurred during the operation | [optional] |
+| **durationMs** | **Int64** | Time in milliseconds taken to execute this step | [optional] |
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

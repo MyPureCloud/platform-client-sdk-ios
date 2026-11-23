@@ -1649,6 +1649,830 @@ open class ArchitectAPI {
 
     
     
+    public enum Expand_getArchitectCapabilities: String { 
+        case actions = "actions"
+        case datatypes = "datatypes"
+        case dependencytypes = "dependencytypes"
+        case features = "features"
+        case flowtypes = "flowtypes"
+        case functions = "functions"
+        case languages = "languages"
+        case operators = "operators"
+        case organization = "organization"
+    }
+    
+    
+    
+    /**
+     Get Architect capabilities such as actions, data types, flow types, functions, and languages
+     
+     - parameter expand: (query) Categories to return (optional)
+     - parameter language: (query) Language ID (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectCapabilities(expand: [String]? = nil, language: [String]? = nil, completion: @escaping ((_ data: Capabilities?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectCapabilitiesWithRequestBuilder(expand: expand, language: language)
+        requestBuilder.execute { (response: Response<Capabilities>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Architect capabilities such as actions, data types, flow types, functions, and languages
+     - GET /api/v2/architect/capabilities
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dataTypes" : {
+    "key" : {
+      "userCreatable" : {
+        "isAvailable" : true,
+        "unavailableReason" : {
+          "feature" : "feature",
+          "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+          "unavailableProduct" : "unavailableProduct",
+          "customCondition" : "customCondition",
+          "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+          "unavailableFeature" : "unavailableFeature",
+          "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+          "enabled" : true,
+          "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+          "exceptionEncountered" : true
+        }
+      },
+      "characteristics" : {
+        "invariantString" : {
+          "passthrough" : {
+            "overloadId" : "overloadId",
+            "funcOp" : "funcOp"
+          },
+          "property" : "property",
+          "properties" : [ "properties", "properties" ]
+        },
+        "localizedString" : {
+          "passthrough" : {
+            "overloadId" : "overloadId",
+            "funcOp" : "funcOp"
+          },
+          "property" : "property",
+          "properties" : [ "properties", "properties" ]
+        },
+        "equality" : {
+          "passthrough" : {
+            "overloadId" : "overloadId",
+            "funcOp" : "funcOp"
+          },
+          "property" : "property",
+          "properties" : [ "properties", "properties" ]
+        }
+      },
+      "isAnAnyType" : {
+        "isAvailable" : true,
+        "unavailableReason" : {
+          "feature" : "feature",
+          "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+          "unavailableProduct" : "unavailableProduct",
+          "customCondition" : "customCondition",
+          "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+          "unavailableFeature" : "unavailableFeature",
+          "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+          "enabled" : true,
+          "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+          "exceptionEncountered" : true
+        }
+      },
+      "isEnum" : true,
+      "isAbstract" : true,
+      "facets" : {
+        "minItems" : 1,
+        "maxItems" : 6,
+        "maximumExclusive" : true,
+        "minLength" : 2,
+        "maximum" : {
+          "stringValue" : "stringValue",
+          "decimalValue" : 5.637376656633329,
+          "booleanValue" : true,
+          "integerValue" : 5
+        },
+        "minimumExclusive" : true,
+        "minimum" : {
+          "stringValue" : "stringValue",
+          "decimalValue" : 5.637376656633329,
+          "booleanValue" : true,
+          "integerValue" : 5
+        },
+        "maxLength" : 7
+      },
+      "isEnumContainer" : true,
+      "flowTypes" : {
+        "key" : {
+          "isAvailable" : true,
+          "unavailableReason" : {
+            "feature" : "feature",
+            "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+            "unavailableProduct" : "unavailableProduct",
+            "customCondition" : "customCondition",
+            "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+            "unavailableFeature" : "unavailableFeature",
+            "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+            "enabled" : true,
+            "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+            "exceptionEncountered" : true
+          }
+        }
+      },
+      "name" : "name",
+      "id" : "id",
+      "isComplex" : true,
+      "properties" : [ {
+        "enumGroup" : "enumGroup",
+        "isComputed" : true,
+        "dataTypeId" : "dataTypeId",
+        "isCollection" : true,
+        "name" : "name",
+        "description" : "description",
+        "availability" : {
+          "isAvailable" : true,
+          "unavailableReason" : {
+            "feature" : "feature",
+            "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+            "unavailableProduct" : "unavailableProduct",
+            "customCondition" : "customCondition",
+            "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+            "unavailableFeature" : "unavailableFeature",
+            "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+            "enabled" : true,
+            "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+            "exceptionEncountered" : true
+          }
+        },
+        "id" : "id",
+        "facets" : {
+          "minItems" : 1,
+          "maxItems" : 6,
+          "maximumExclusive" : true,
+          "minLength" : 2,
+          "maximum" : {
+            "stringValue" : "stringValue",
+            "decimalValue" : 5.637376656633329,
+            "booleanValue" : true,
+            "integerValue" : 5
+          },
+          "minimumExclusive" : true,
+          "minimum" : {
+            "stringValue" : "stringValue",
+            "decimalValue" : 5.637376656633329,
+            "booleanValue" : true,
+            "integerValue" : 5
+          },
+          "maxLength" : 7
+        }
+      }, {
+        "enumGroup" : "enumGroup",
+        "isComputed" : true,
+        "dataTypeId" : "dataTypeId",
+        "isCollection" : true,
+        "name" : "name",
+        "description" : "description",
+        "availability" : {
+          "isAvailable" : true,
+          "unavailableReason" : {
+            "feature" : "feature",
+            "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+            "unavailableProduct" : "unavailableProduct",
+            "customCondition" : "customCondition",
+            "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+            "unavailableFeature" : "unavailableFeature",
+            "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+            "enabled" : true,
+            "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+            "exceptionEncountered" : true
+          }
+        },
+        "id" : "id",
+        "facets" : {
+          "minItems" : 1,
+          "maxItems" : 6,
+          "maximumExclusive" : true,
+          "minLength" : 2,
+          "maximum" : {
+            "stringValue" : "stringValue",
+            "decimalValue" : 5.637376656633329,
+            "booleanValue" : true,
+            "integerValue" : 5
+          },
+          "minimumExclusive" : true,
+          "minimum" : {
+            "stringValue" : "stringValue",
+            "decimalValue" : 5.637376656633329,
+            "booleanValue" : true,
+            "integerValue" : 5
+          },
+          "maxLength" : 7
+        }
+      } ],
+      "allowCollection" : true,
+      "direction" : {
+        "flow" : {
+          "inputColl" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "inputOne" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "inputOutputOne" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "outputAny" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "outputColl" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "inputOutputAny" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "outputOne" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "inputOutputColl" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          },
+          "inputAny" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "features" : {
+    "key" : {
+      "isAvailable" : true,
+      "unavailableReason" : {
+        "feature" : "feature",
+        "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+        "unavailableProduct" : "unavailableProduct",
+        "customCondition" : "customCondition",
+        "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+        "unavailableFeature" : "unavailableFeature",
+        "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+        "enabled" : true,
+        "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+        "exceptionEncountered" : true
+      }
+    }
+  },
+  "flowTypes" : {
+    "key" : {
+      "userCreatable" : {
+        "isAvailable" : true,
+        "unavailableReason" : {
+          "feature" : "feature",
+          "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+          "unavailableProduct" : "unavailableProduct",
+          "customCondition" : "customCondition",
+          "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+          "unavailableFeature" : "unavailableFeature",
+          "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+          "enabled" : true,
+          "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+          "exceptionEncountered" : true
+        }
+      },
+      "isAvailable" : true,
+      "components" : {
+        "key" : {
+          "isAvailable" : true,
+          "canBeStartupObject" : true,
+          "unavailableReason" : {
+            "feature" : "feature",
+            "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+            "unavailableProduct" : "unavailableProduct",
+            "customCondition" : "customCondition",
+            "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+            "unavailableFeature" : "unavailableFeature",
+            "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+            "enabled" : true,
+            "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+            "exceptionEncountered" : true
+          }
+        }
+      },
+      "unavailableReason" : {
+        "feature" : "feature",
+        "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+        "unavailableProduct" : "unavailableProduct",
+        "customCondition" : "customCondition",
+        "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+        "unavailableFeature" : "unavailableFeature",
+        "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+        "enabled" : true,
+        "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+        "exceptionEncountered" : true
+      },
+      "isSecure" : true,
+      "maxSize" : 9,
+      "supportsLanguages" : {
+        "isAvailable" : true,
+        "unavailableReason" : {
+          "feature" : "feature",
+          "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+          "unavailableProduct" : "unavailableProduct",
+          "customCondition" : "customCondition",
+          "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+          "unavailableFeature" : "unavailableFeature",
+          "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+          "enabled" : true,
+          "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+          "exceptionEncountered" : true
+        },
+        "moreThanOneLanguage" : true
+      },
+      "userVariableLimits" : "{}",
+      "limits" : "{}"
+    }
+  },
+  "functions" : {
+    "key" : {
+      "overloads" : {
+        "key" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "languages" : {
+    "key" : {
+      "isAvailable" : true,
+      "features" : {
+        "collectInput" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        },
+        "textToSpeech" : {
+          "engines" : {
+            "key" : {
+              "isDefault" : true,
+              "flowTypes" : {
+                "key" : {
+                  "isAvailable" : true,
+                  "unavailableReason" : {
+                    "feature" : "feature",
+                    "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                    "unavailableProduct" : "unavailableProduct",
+                    "customCondition" : "customCondition",
+                    "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                    "unavailableFeature" : "unavailableFeature",
+                    "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                    "enabled" : true,
+                    "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                    "exceptionEncountered" : true
+                  }
+                }
+              },
+              "voices" : {
+                "key" : {
+                  "isDefault" : true
+                }
+              },
+              "id" : "id"
+            }
+          }
+        },
+        "copilot" : {
+          "enabled" : true
+        },
+        "knowledgeBase" : {
+          "language" : "language"
+        },
+        "positionInQueue" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        },
+        "runtimeDataPlayback" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        },
+        "transcription" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        },
+        "voicemail" : {
+          "key" : {
+            "flowTypes" : {
+              "key" : {
+                "isAvailable" : true,
+                "unavailableReason" : {
+                  "feature" : "feature",
+                  "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                  "unavailableProduct" : "unavailableProduct",
+                  "customCondition" : "customCondition",
+                  "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                  "unavailableFeature" : "unavailableFeature",
+                  "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                  "enabled" : true,
+                  "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                  "exceptionEncountered" : true
+                }
+              }
+            }
+          }
+        },
+        "estimatedWaitTime" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        },
+        "speechRec" : {
+          "flowTypes" : {
+            "key" : {
+              "isAvailable" : true,
+              "unavailableReason" : {
+                "feature" : "feature",
+                "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                "unavailableProduct" : "unavailableProduct",
+                "customCondition" : "customCondition",
+                "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                "unavailableFeature" : "unavailableFeature",
+                "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                "enabled" : true,
+                "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                "exceptionEncountered" : true
+              }
+            }
+          }
+        }
+      },
+      "isDefault" : true,
+      "unavailableReason" : {
+        "feature" : "feature",
+        "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+        "unavailableProduct" : "unavailableProduct",
+        "customCondition" : "customCondition",
+        "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+        "unavailableFeature" : "unavailableFeature",
+        "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+        "enabled" : true,
+        "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+        "exceptionEncountered" : true
+      },
+      "functions" : {
+        "key" : {
+          "overloads" : {
+            "key" : {
+              "flowTypes" : {
+                "key" : {
+                  "isAvailable" : true,
+                  "unavailableReason" : {
+                    "feature" : "feature",
+                    "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+                    "unavailableProduct" : "unavailableProduct",
+                    "customCondition" : "customCondition",
+                    "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+                    "unavailableFeature" : "unavailableFeature",
+                    "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+                    "enabled" : true,
+                    "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+                    "exceptionEncountered" : true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "contexts" : {
+        "quantity" : [ "quantity", "quantity" ],
+        "gender" : [ "gender", "gender" ],
+        "case" : [ "case", "case" ]
+      },
+      "fallback" : "fallback"
+    }
+  },
+  "featureSupport" : "{}",
+  "organization" : "{}",
+  "eTag" : "eTag",
+  "expansions" : {
+    "key" : {
+      "key" : [ "expansions", "expansions" ]
+    }
+  },
+  "actions" : {
+    "key" : {
+      "flowTypes" : {
+        "key" : {
+          "isAvailable" : true,
+          "unavailableReason" : {
+            "feature" : "feature",
+            "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+            "unavailableProduct" : "unavailableProduct",
+            "customCondition" : "customCondition",
+            "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+            "unavailableFeature" : "unavailableFeature",
+            "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+            "enabled" : true,
+            "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+            "exceptionEncountered" : true
+          }
+        }
+      },
+      "flowTypesDeprecated" : {
+        "key" : {
+          "isAvailable" : true,
+          "unavailableReason" : {
+            "feature" : "feature",
+            "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+            "unavailableProduct" : "unavailableProduct",
+            "customCondition" : "customCondition",
+            "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+            "unavailableFeature" : "unavailableFeature",
+            "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+            "enabled" : true,
+            "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+            "exceptionEncountered" : true
+          }
+        }
+      },
+      "categoryInfo" : {
+        "categoryId" : "categoryId",
+        "displayIndex" : 0
+      },
+      "limits" : "{}"
+    }
+  },
+  "dependencyTypes" : {
+    "key" : {
+      "isVersioned" : true,
+      "availability" : {
+        "isAvailable" : true,
+        "unavailableReason" : {
+          "feature" : "feature",
+          "featuresAllOf" : [ "featuresAllOf", "featuresAllOf" ],
+          "unavailableProduct" : "unavailableProduct",
+          "customCondition" : "customCondition",
+          "featuresOneOf" : [ "featuresOneOf", "featuresOneOf" ],
+          "unavailableFeature" : "unavailableFeature",
+          "productsOneOf" : [ "productsOneOf", "productsOneOf" ],
+          "enabled" : true,
+          "productsAllOf" : [ "productsAllOf", "productsAllOf" ],
+          "exceptionEncountered" : true
+        }
+      }
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter expand: (query) Categories to return (optional)
+     - parameter language: (query) Language ID (optional)
+
+     - returns: RequestBuilder<Capabilities> 
+     */
+    open class func getArchitectCapabilitiesWithRequestBuilder(expand: [String]? = nil, language: [String]? = nil) -> RequestBuilder<Capabilities> {        
+        let path = "/api/v2/architect/capabilities"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand, 
+            "language": language
+        ])
+
+        let requestBuilder: RequestBuilder<Capabilities>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -1689,6 +2513,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -1789,6 +2614,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -1885,6 +2711,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -2227,6 +3054,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -2426,6 +3254,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -2638,6 +3467,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -2743,6 +3573,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -3020,6 +3851,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -3121,6 +3953,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -3217,6 +4050,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -3573,6 +4407,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
@@ -3671,6 +4506,7 @@ open class ArchitectAPI {
         case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case externalmcpserverintegration = "EXTERNALMCPSERVERINTEGRATION"
+        case externalmcptool = "EXTERNALMCPTOOL"
         case file = "FILE"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"

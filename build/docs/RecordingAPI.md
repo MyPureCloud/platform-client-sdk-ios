@@ -33,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingRecordingkeys**](RecordingAPI#getRecordingRecordingkeys) | Get encryption key list |
 | [**getRecordingRecordingkeysRotationschedule**](RecordingAPI#getRecordingRecordingkeysRotationschedule) | Get key rotation schedule |
 | [**getRecordingSettings**](RecordingAPI#getRecordingSettings) | Get the Recording Settings for the Organization |
+| [**getRecordingSnippetsSettings**](RecordingAPI#getRecordingSnippetsSettings) | Get the Snippet Recording Settings for the Organization |
 | [**getRecordingUploadsReport**](RecordingAPI#getRecordingUploadsReport) | Get the status of a recording upload status report |
 | [**getRecordingsRetentionQuery**](RecordingAPI#getRecordingsRetentionQuery) | Query for recording retention data |
 | [**getRecordingsScreensessionsDetails**](RecordingAPI#getRecordingsScreensessionsDetails) | Retrieves an object containing the total number of concurrent active screen recordings |
@@ -60,6 +61,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRecordingMediaretentionpolicy**](RecordingAPI#putRecordingMediaretentionpolicy) | Update a media retention policy |
 | [**putRecordingRecordingkeysRotationschedule**](RecordingAPI#putRecordingRecordingkeysRotationschedule) | Update key rotation schedule |
 | [**putRecordingSettings**](RecordingAPI#putRecordingSettings) | Update the Recording Settings for the Organization |
+| [**putRecordingSnippetsSettings**](RecordingAPI#putRecordingSnippetsSettings) | Update the Snippet Recording Settings for the Organization |
 | [**putRecordingsDeletionprotection**](RecordingAPI#putRecordingsDeletionprotection) | Apply or revoke recording protection for conversations |
 {: class="table-striped"}
 
@@ -1670,6 +1672,52 @@ RecordingAPI.getRecordingSettings(createDefault: createDefault) { (response, err
 [**RecordingSettings**](RecordingSettings)
 
 
+## getRecordingSnippetsSettings
+
+
+
+> [SnippetRecordingSettings](SnippetRecordingSettings) getRecordingSnippetsSettings()
+
+Get the Snippet Recording Settings for the Organization
+
+
+
+Wraps GET /api/v2/recording/snippets/settings  
+
+Requires ALL permissions: 
+
+* recording:snippetRecordingSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+
+// Code example
+RecordingAPI.getRecordingSnippetsSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingSnippetsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SnippetRecordingSettings**](SnippetRecordingSettings)
+
+
 ## getRecordingUploadsReport
 
 
@@ -3089,6 +3137,56 @@ RecordingAPI.putRecordingSettings(body: body) { (response, error) in
 [**RecordingSettings**](RecordingSettings)
 
 
+## putRecordingSnippetsSettings
+
+
+
+> [SnippetRecordingSettings](SnippetRecordingSettings) putRecordingSnippetsSettings(body)
+
+Update the Snippet Recording Settings for the Organization
+
+
+
+Wraps PUT /api/v2/recording/snippets/settings  
+
+Requires ALL permissions: 
+
+* recording:snippetRecordingSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: SnippetRecordingSettings = new SnippetRecordingSettings(...) // Snippet recording settings
+
+// Code example
+RecordingAPI.putRecordingSnippetsSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.putRecordingSnippetsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SnippetRecordingSettings**](SnippetRecordingSettings)| Snippet recording settings | |
+
+
+### Return type
+
+[**SnippetRecordingSettings**](SnippetRecordingSettings)
+
+
 ## putRecordingsDeletionprotection
 
 
@@ -3142,4 +3240,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (re
 [**ManageDeleteProtectionResult**](ManageDeleteProtectionResult)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

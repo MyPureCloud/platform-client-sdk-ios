@@ -24,8 +24,10 @@
 | **createStatus** | **String** | Status of asynchronous create operation | [optional] |
 | **createError** | [**ErrorBody**](ErrorBody) | Error information returned, if createStatus is set to Error | [optional] |
 | **whatsAppBusinessAccountId** | **String** | The WhatsApp Business Account Id (WABA Id) | [optional] |
+| **phoneNumberId** | **String** | The Meta phone number ID associated with this integration (Embedded Signup v4). | [optional] |
+| **businessPortfolioId** | **String** | The Meta business portfolio ID associated with this integration (Embedded Signup v4). | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

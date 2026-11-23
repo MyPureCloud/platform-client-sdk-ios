@@ -10164,9 +10164,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -10219,7 +10219,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -10369,9 +10369,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -10424,7 +10424,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 6,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -25221,34 +25221,34 @@ open class UsersAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 2,
+    "count" : 0,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 2,
+    "count" : 0,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     } ]
   } ]
@@ -25848,6 +25848,86 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets all divisions for a particular user in an org.
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) DivisionPermissionQuery 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationSubjectDivisionsQuery(subjectId: String, body: [String], completion: @escaping ((_ data: DomainUserDivisionsResultListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationSubjectDivisionsQueryWithRequestBuilder(subjectId: subjectId, body: body)
+        requestBuilder.execute { (response: Response<DomainUserDivisionsResultListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets all divisions for a particular user in an org.
+     - POST /api/v2/authorization/subjects/{subjectId}/divisions/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "permission" : "permission",
+    "id" : "id",
+    "divisions" : [ "divisions", "divisions" ]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "permission" : "permission",
+    "id" : "id",
+    "divisions" : [ "divisions", "divisions" ]
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) DivisionPermissionQuery 
+
+     - returns: RequestBuilder<DomainUserDivisionsResultListing> 
+     */
+    open class func postAuthorizationSubjectDivisionsQueryWithRequestBuilder(subjectId: String, body: [String]) -> RequestBuilder<DomainUserDivisionsResultListing> {        
+        var path = "/api/v2/authorization/subjects/{subjectId}/divisions/query"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DomainUserDivisionsResultListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

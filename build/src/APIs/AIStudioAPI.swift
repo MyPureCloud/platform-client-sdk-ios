@@ -1598,6 +1598,136 @@ open class AIStudioAPI {
 
     
     
+    /**
+     Get the status of a discovery snapshot.
+     
+     - parameter snapshotId: (path) Snapshot ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuidesTranscriptsDiscoverySnapshotId(snapshotId: String, completion: @escaping ((_ data: GetDiscoveryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuidesTranscriptsDiscoverySnapshotIdWithRequestBuilder(snapshotId: snapshotId)
+        requestBuilder.execute { (response: Response<GetDiscoveryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of a discovery snapshot.
+     - GET /api/v2/guides/transcripts/discovery/{snapshotId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "snapshotId" : "snapshotId",
+  "snapshotStatus" : "InProgress",
+  "errorCode" : "errorCode",
+  "items" : [ {
+    "rfcName" : "rfcName",
+    "conversationCount" : 0
+  }, {
+    "rfcName" : "rfcName",
+    "conversationCount" : 0
+  } ]
+}, statusCode=200}]
+     
+     - parameter snapshotId: (path) Snapshot ID 
+
+     - returns: RequestBuilder<GetDiscoveryResponse> 
+     */
+    open class func getGuidesTranscriptsDiscoverySnapshotIdWithRequestBuilder(snapshotId: String) -> RequestBuilder<GetDiscoveryResponse> {        
+        var path = "/api/v2/guides/transcripts/discovery/{snapshotId}"
+        let snapshotIdPreEscape = "\(snapshotId)"
+        let snapshotIdPostEscape = snapshotIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{snapshotId}", with: snapshotIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GetDiscoveryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the status of a guide generation job.
+     
+     - parameter snapshotId: (path) Snapshot ID 
+     - parameter rfcName: (query) RFC name 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuidesTranscriptsSnapshotGenerate(snapshotId: String, rfcName: String, completion: @escaping ((_ data: GetGenerationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuidesTranscriptsSnapshotGenerateWithRequestBuilder(snapshotId: snapshotId, rfcName: rfcName)
+        requestBuilder.execute { (response: Response<GetGenerationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of a guide generation job.
+     - GET /api/v2/guides/transcripts/snapshots/{snapshotId}/generate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "snapshotId" : "snapshotId",
+  "generationStatus" : "InProgress",
+  "rfcName" : "rfcName",
+  "errorCode" : "errorCode",
+  "guideDraft" : "guideDraft"
+}, statusCode=200}]
+     
+     - parameter snapshotId: (path) Snapshot ID 
+     - parameter rfcName: (query) RFC name 
+
+     - returns: RequestBuilder<GetGenerationResponse> 
+     */
+    open class func getGuidesTranscriptsSnapshotGenerateWithRequestBuilder(snapshotId: String, rfcName: String) -> RequestBuilder<GetGenerationResponse> {        
+        var path = "/api/v2/guides/transcripts/snapshots/{snapshotId}/generate"
+        let snapshotIdPreEscape = "\(snapshotId)"
+        let snapshotIdPostEscape = snapshotIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{snapshotId}", with: snapshotIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "rfcName": rfcName
+        ])
+
+        let requestBuilder: RequestBuilder<GetGenerationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -2726,6 +2856,118 @@ open class AIStudioAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GuideContentGenerationJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a discovery job.
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuidesTranscriptsDiscovery(body: DiscoveryRequest, completion: @escaping ((_ data: DiscoveryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuidesTranscriptsDiscoveryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DiscoveryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a discovery job.
+     - POST /api/v2/guides/transcripts/discovery
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "snapshotId" : "snapshotId"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<DiscoveryResponse> 
+     */
+    open class func postGuidesTranscriptsDiscoveryWithRequestBuilder(body: DiscoveryRequest) -> RequestBuilder<DiscoveryResponse> {        
+        let path = "/api/v2/guides/transcripts/discovery"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DiscoveryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a guide generation job.
+     
+     - parameter snapshotId: (path) Snapshot ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuidesTranscriptsSnapshotGenerate(snapshotId: String, body: GenerateEntryRequest, completion: @escaping ((_ data: GenerateEntryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuidesTranscriptsSnapshotGenerateWithRequestBuilder(snapshotId: snapshotId, body: body)
+        requestBuilder.execute { (response: Response<GenerateEntryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a guide generation job.
+     - POST /api/v2/guides/transcripts/snapshots/{snapshotId}/generate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "snapshotId" : "snapshotId",
+  "rfcName" : "rfcName"
+}, statusCode=200}]
+     
+     - parameter snapshotId: (path) Snapshot ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<GenerateEntryResponse> 
+     */
+    open class func postGuidesTranscriptsSnapshotGenerateWithRequestBuilder(snapshotId: String, body: GenerateEntryRequest) -> RequestBuilder<GenerateEntryResponse> {        
+        var path = "/api/v2/guides/transcripts/snapshots/{snapshotId}/generate"
+        let snapshotIdPreEscape = "\(snapshotId)"
+        let snapshotIdPostEscape = snapshotIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{snapshotId}", with: snapshotIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GenerateEntryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

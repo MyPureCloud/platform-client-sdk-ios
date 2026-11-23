@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationParticipantFlaggedreason**](ConversationsAPI#deleteConversationParticipantFlaggedreason) | Remove flagged reason from conversation participant. |
 | [**deleteConversationsCallParticipantCommunicationPostflowaction**](ConversationsAPI#deleteConversationsCallParticipantCommunicationPostflowaction) | Remove mandatory post call actions. |
 | [**deleteConversationsCallParticipantConsult**](ConversationsAPI#deleteConversationsCallParticipantConsult) | Cancel the transfer |
+| [**deleteConversationsEmailDraft**](ConversationsAPI#deleteConversationsEmailDraft) | Discard an email draft and reset to initial state |
 | [**deleteConversationsEmailMessagesDraftAttachment**](ConversationsAPI#deleteConversationsEmailMessagesDraftAttachment) | Delete attachment from draft |
 | [**deleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI#deleteConversationsMessagesCachedmediaCachedMediaItemId) | Remove a cached media item asychronously |
 | [**deleteConversationsMessagingIntegrationsAppleIntegrationId**](ConversationsAPI#deleteConversationsMessagingIntegrationsAppleIntegrationId) | Delete an Apple messaging integration |
@@ -31,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsConversationsDetailsJobResults**](ConversationsAPI#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async details job |
 | [**getAnalyticsConversationsDetailsJobsAvailability**](ConversationsAPI#getAnalyticsConversationsDetailsJobsAvailability) | Lookup the datalake availability date and time |
 | [**getConversation**](ConversationsAPI#getConversation) | Get conversation |
+| [**getConversationAccessattributes**](ConversationsAPI#getConversationAccessattributes) | Get the access attributes on a conversation. |
 | [**getConversationCommunicationAgentchecklist**](ConversationsAPI#getConversationCommunicationAgentchecklist) | Get checklist info for a single checklist. |
 | [**getConversationCommunicationAgentchecklistJob**](ConversationsAPI#getConversationCommunicationAgentchecklistJob) | Get inference job status |
 | [**getConversationCommunicationAgentchecklists**](ConversationsAPI#getConversationCommunicationAgentchecklists) | Get information of all checklists associated with a conversation. |
@@ -162,6 +164,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsCobrowsesessionParticipantAttributes**](ConversationsAPI#patchConversationsCobrowsesessionParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCobrowsesessionParticipantCommunication**](ConversationsAPI#patchConversationsCobrowsesessionParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
 | [**patchConversationsEmail**](ConversationsAPI#patchConversationsEmail) | Update a conversation by disconnecting all of the participants |
+| [**patchConversationsEmailDraft**](ConversationsAPI#patchConversationsEmailDraft) | Update email draft headers or include message history |
 | [**patchConversationsEmailMessagesDraft**](ConversationsAPI#patchConversationsEmailMessagesDraft) | Reset conversation draft to its initial state and/or auto-fill draft content |
 | [**patchConversationsEmailParticipant**](ConversationsAPI#patchConversationsEmailParticipant) | Update conversation participant |
 | [**patchConversationsEmailParticipantAttributes**](ConversationsAPI#patchConversationsEmailParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -237,6 +240,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCobrowsesessionParticipantReplace**](ConversationsAPI#postConversationsCobrowsesessionParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCustomattributesSchemas**](ConversationsAPI#postConversationsCustomattributesSchemas) | Create a schema |
 | [**postConversationsCustomattributesSearch**](ConversationsAPI#postConversationsCustomattributesSearch) | Search resources. |
+| [**postConversationsEmailDraft**](ConversationsAPI#postConversationsEmailDraft) | Create and initialize an email draft |
 | [**postConversationsEmailInboundmessages**](ConversationsAPI#postConversationsEmailInboundmessages) | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**postConversationsEmailMessages**](ConversationsAPI#postConversationsEmailMessages) | Send an email reply |
 | [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
@@ -280,6 +284,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI#postConversationsSocialParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI#postConversationsVideoParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsVideosMeetings**](ConversationsAPI#postConversationsVideosMeetings) | Generate a meetingId for a given conferenceId |
+| [**putConversationAccessattributes**](ConversationsAPI#putConversationAccessattributes) | Set the access attributes on a conversation. |
 | [**putConversationCustomattributes**](ConversationsAPI#putConversationCustomattributes) | Create or update a single custom attributes record. Updating replaces all data with the provided fields. |
 | [**putConversationCustomattributesBulk**](ConversationsAPI#putConversationCustomattributesBulk) | Create or update a list of custom attributes records. Updating replaces all data with the provided fields. |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
@@ -706,6 +711,55 @@ ConversationsAPI.deleteConversationsCallParticipantConsult(conversationId: conve
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteConversationsEmailDraft
+
+
+
+> Void deleteConversationsEmailDraft(conversationId)
+
+Discard an email draft and reset to initial state
+
+
+
+Wraps DELETE /api/v2/conversations/emails/{conversationId}/draft  
+
+Requires ANY permissions: 
+
+* conversation:emailDraft:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let conversationId: String = "" // conversationId
+
+// Code example
+ConversationsAPI.deleteConversationsEmailDraft(conversationId: conversationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsEmailDraft was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
 
 
 ### Return type
@@ -1658,6 +1712,56 @@ ConversationsAPI.getConversation(conversationId: conversationId) { (response, er
 ### Return type
 
 [**Conversation**](Conversation)
+
+
+## getConversationAccessattributes
+
+
+
+> [ConversationAccessAttributesResponse](ConversationAccessAttributesResponse) getConversationAccessattributes(conversationId)
+
+Get the access attributes on a conversation.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/accessattributes  
+
+Requires ANY permissions: 
+
+* conversation:accessAttributes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let conversationId: String = "" // conversation ID
+
+// Code example
+ConversationsAPI.getConversationAccessattributes(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationAccessattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+
+
+### Return type
+
+[**ConversationAccessAttributesResponse**](ConversationAccessAttributesResponse)
 
 
 ## getConversationCommunicationAgentchecklist
@@ -8472,6 +8576,60 @@ ConversationsAPI.patchConversationsEmail(conversationId: conversationId, body: b
 [**Conversation**](Conversation)
 
 
+## patchConversationsEmailDraft
+
+
+
+> [EmailMessage](EmailMessage) patchConversationsEmailDraft(conversationId, body)
+
+Update email draft headers or include message history
+
+Update email draft recipients (To, CC, BCC), subject, or custom override headers and include message history in the draft. Supports both user context and non-user context (OAuth client credentials). With user context: all operations are supported and the user must be an active participant on the conversation. Without user context: historyIncluded cannot be used.
+
+
+
+Wraps PATCH /api/v2/conversations/emails/{conversationId}/draft  
+
+Requires ANY permissions: 
+
+* conversation:emailDraft:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let conversationId: String = "" // conversationId
+let body: PatchDraftRequest = new PatchDraftRequest(...) // Patch Draft Request
+
+// Code example
+ConversationsAPI.patchConversationsEmailDraft(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsEmailDraft was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**PatchDraftRequest**](PatchDraftRequest)| Patch Draft Request | |
+
+
+### Return type
+
+[**EmailMessage**](EmailMessage)
+
+
 ## patchConversationsEmailMessagesDraft
 
 
@@ -12464,6 +12622,58 @@ ConversationsAPI.postConversationsCustomattributesSearch(body: body) { (response
 [**JsonSearchResponse**](JsonSearchResponse)
 
 
+## postConversationsEmailDraft
+
+
+
+> [EmailMessage](EmailMessage) postConversationsEmailDraft(conversationId, body)
+
+Create and initialize an email draft
+
+
+
+Wraps POST /api/v2/conversations/emails/{conversationId}/draft  
+
+Requires ANY permissions: 
+
+* conversation:emailDraft:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let conversationId: String = "" // conversationId
+let body: CreateDraftRequest = new CreateDraftRequest(...) // Create Draft Request
+
+// Code example
+ConversationsAPI.postConversationsEmailDraft(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsEmailDraft was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**CreateDraftRequest**](CreateDraftRequest)| Create Draft Request | [optional] |
+
+
+### Return type
+
+[**EmailMessage**](EmailMessage)
+
+
 ## postConversationsEmailInboundmessages
 
 
@@ -14730,6 +14940,58 @@ ConversationsAPI.postConversationsVideosMeetings(body: body) { (response, error)
 [**MeetingIdRecord**](MeetingIdRecord)
 
 
+## putConversationAccessattributes
+
+
+
+> String putConversationAccessattributes(conversationId, body)
+
+Set the access attributes on a conversation.
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/accessattributes  
+
+Requires ANY permissions: 
+
+* conversation:accessAttributes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let conversationId: String = "" // conversation ID
+let body: ConversationAccessAttributesUpdate = new ConversationAccessAttributesUpdate(...) // Conversation Access Attributes
+
+// Code example
+ConversationsAPI.putConversationAccessattributes(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationAccessattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**ConversationAccessAttributesUpdate**](ConversationAccessAttributesUpdate)| Conversation Access Attributes | |
+
+
+### Return type
+
+**String**
+
+
 ## putConversationCustomattributes
 
 
@@ -16092,4 +16354,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

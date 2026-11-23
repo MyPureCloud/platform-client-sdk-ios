@@ -10214,6 +10214,55 @@ open class RecordingAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get the Snippet Recording Settings for the Organization
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRecordingSnippetsSettings(completion: @escaping ((_ data: SnippetRecordingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingSnippetsSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SnippetRecordingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the Snippet Recording Settings for the Organization
+     - GET /api/v2/recording/snippets/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "exportIntegration" : "{}",
+  "daysToArchive" : 0,
+  "daysToDelete" : 6
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SnippetRecordingSettings> 
+     */
+    open class func getRecordingSnippetsSettingsWithRequestBuilder() -> RequestBuilder<SnippetRecordingSettings> {        
+        let path = "/api/v2/recording/snippets/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SnippetRecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -14231,6 +14280,60 @@ open class RecordingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Update the Snippet Recording Settings for the Organization
+     
+     - parameter body: (body) Snippet recording settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRecordingSnippetsSettings(body: SnippetRecordingSettings, completion: @escaping ((_ data: SnippetRecordingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRecordingSnippetsSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SnippetRecordingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the Snippet Recording Settings for the Organization
+     - PUT /api/v2/recording/snippets/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "exportIntegration" : "{}",
+  "daysToArchive" : 0,
+  "daysToDelete" : 6
+}, statusCode=200}]
+     
+     - parameter body: (body) Snippet recording settings 
+
+     - returns: RequestBuilder<SnippetRecordingSettings> 
+     */
+    open class func putRecordingSnippetsSettingsWithRequestBuilder(body: SnippetRecordingSettings) -> RequestBuilder<SnippetRecordingSettings> {        
+        let path = "/api/v2/recording/snippets/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SnippetRecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

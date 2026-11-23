@@ -4172,6 +4172,7 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "matchedTranscriptsCount" : 6,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
     "selfUri" : "https://openapi-generator.tech",
@@ -4182,7 +4183,8 @@ open class SpeechTextAnalyticsAPI {
   "action" : "action",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "state" : "Running"
+  "state" : "Running",
+  "processedTranscriptsCount" : 0
 }, statusCode=200}]
      
      - parameter body: (body) The publish test topic phrase job to create 

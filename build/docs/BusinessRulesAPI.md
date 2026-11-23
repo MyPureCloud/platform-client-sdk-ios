@@ -2511,4 +2511,4 @@ BusinessRulesAPI.putBusinessrulesSchema(schemaId: schemaId, body: body) { (respo
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_
