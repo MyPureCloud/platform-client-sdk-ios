@@ -100,6 +100,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationSubjectBulkremove**](UsersAPI#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
 | [**postAuthorizationSubjectBulkreplace**](UsersAPI#postAuthorizationSubjectBulkreplace) | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**postAuthorizationSubjectDivisionRole**](UsersAPI#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
+| [**postAuthorizationSubjectDivisionsQuery**](UsersAPI#postAuthorizationSubjectDivisionsQuery) | Gets all divisions for a particular user in an org. |
 | [**postUserExternalid**](UsersAPI#postUserExternalid) | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**postUserInvite**](UsersAPI#postUserInvite) | Send an activation email to the user |
 | [**postUserPassword**](UsersAPI#postUserPassword) | Change a users password |
@@ -5160,6 +5161,58 @@ UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: 
 `nil` (empty response body)
 
 
+## postAuthorizationSubjectDivisionsQuery
+
+
+
+> [DomainUserDivisionsResultListing](DomainUserDivisionsResultListing) postAuthorizationSubjectDivisionsQuery(subjectId, body)
+
+Gets all divisions for a particular user in an org.
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/divisions/query  
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: [String] = [""] // DivisionPermissionQuery
+
+// Code example
+UsersAPI.postAuthorizationSubjectDivisionsQuery(subjectId: subjectId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postAuthorizationSubjectDivisionsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **body** | [**[String]**](String)| DivisionPermissionQuery | |
+
+
+### Return type
+
+[**DomainUserDivisionsResultListing**](DomainUserDivisionsResultListing)
+
+
 ## postUserExternalid
 
 
@@ -6854,4 +6907,4 @@ UsersAPI.putUsersStationsMeAssociatedstationStationId(stationId: stationId) { (e
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

@@ -24,7 +24,9 @@
 | **answeringMachineFlow** | [**DomainEntityRef**](DomainEntityRef) | The inbound flow to transfer to if an answering machine is detected during the outbound call of a customer first callback when answeringMachineReactionType is set to TransferToFlow. | [optional] |
 | **edgeGroup** | [**DomainEntityRef**](DomainEntityRef) | The identifier of the edge group that will place the calls. Can be set to specify custom edge group instead of default one. | [optional] |
 | **site** | [**DomainEntityRef**](DomainEntityRef) | The identifier of the site to be used for dialing; can be set in place of an edge group. | [optional] |
+| **enableAgentReservation** | **Bool** | The property to enable pre-dial agent reservation | [optional] |
+| **maxCallbackDelayHours** | **Int** | The max amount of time a callback can be scheduled out into the future (in hours); Allowable range 1 - 720 hour(s) (inclusive) | [optional] |
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

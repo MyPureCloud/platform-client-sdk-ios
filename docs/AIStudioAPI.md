@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGuideVersionJob**](AIStudioAPI#getGuideVersionJob) | Get the status of the publishing job for this guide version. |
 | [**getGuides**](AIStudioAPI#getGuides) | Get all guides. |
 | [**getGuidesJob**](AIStudioAPI#getGuidesJob) | Get the status of the guide content generation job. |
+| [**getGuidesTranscriptsDiscoverySnapshotId**](AIStudioAPI#getGuidesTranscriptsDiscoverySnapshotId) | Get the status of a discovery snapshot. |
+| [**getGuidesTranscriptsSnapshotGenerate**](AIStudioAPI#getGuidesTranscriptsSnapshotGenerate) | Get the status of a guide generation job. |
 | [**patchAgenticVirtualagent**](AIStudioAPI#patchAgenticVirtualagent) | Update a virtual agent. |
 | [**patchGuide**](AIStudioAPI#patchGuide) | Update a guide. |
 | [**patchGuideVersion**](AIStudioAPI#patchGuideVersion) | Update a guide version. |
@@ -30,6 +32,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postGuideVersions**](AIStudioAPI#postGuideVersions) | Create a guide version. |
 | [**postGuides**](AIStudioAPI#postGuides) | Create a guide. |
 | [**postGuidesJobs**](AIStudioAPI#postGuidesJobs) | Start a guide content generation job. |
+| [**postGuidesTranscriptsDiscovery**](AIStudioAPI#postGuidesTranscriptsDiscovery) | Create a discovery job. |
+| [**postGuidesTranscriptsSnapshotGenerate**](AIStudioAPI#postGuidesTranscriptsSnapshotGenerate) | Create a guide generation job. |
 | [**postGuidesUploads**](AIStudioAPI#postGuidesUploads) | Generate presigned URL for uploading a file content to generate guide |
 | [**putConversationsSummariesSetting**](AIStudioAPI#putConversationsSummariesSetting) | Update a summary setting. |
 {: class="table-striped"}
@@ -778,6 +782,108 @@ AIStudioAPI.getGuidesJob(jobId: jobId) { (response, error) in
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
 
 
+## getGuidesTranscriptsDiscoverySnapshotId
+
+
+
+> [GetDiscoveryResponse](GetDiscoveryResponse) getGuidesTranscriptsDiscoverySnapshotId(snapshotId)
+
+Get the status of a discovery snapshot.
+
+
+
+Wraps GET /api/v2/guides/transcripts/discovery/{snapshotId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let snapshotId: String = "" // Snapshot ID
+
+// Code example
+AIStudioAPI.getGuidesTranscriptsDiscoverySnapshotId(snapshotId: snapshotId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuidesTranscriptsDiscoverySnapshotId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| Snapshot ID | |
+
+
+### Return type
+
+[**GetDiscoveryResponse**](GetDiscoveryResponse)
+
+
+## getGuidesTranscriptsSnapshotGenerate
+
+
+
+> [GetGenerationResponse](GetGenerationResponse) getGuidesTranscriptsSnapshotGenerate(snapshotId, rfcName)
+
+Get the status of a guide generation job.
+
+
+
+Wraps GET /api/v2/guides/transcripts/snapshots/{snapshotId}/generate  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let snapshotId: String = "" // Snapshot ID
+let rfcName: String = "" // RFC name
+
+// Code example
+AIStudioAPI.getGuidesTranscriptsSnapshotGenerate(snapshotId: snapshotId, rfcName: rfcName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuidesTranscriptsSnapshotGenerate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| Snapshot ID | |
+| **rfcName** | **String**| RFC name | |
+
+
+### Return type
+
+[**GetGenerationResponse**](GetGenerationResponse)
+
+
 ## patchAgenticVirtualagent
 
 
@@ -1401,6 +1507,108 @@ AIStudioAPI.postGuidesJobs(body: body) { (response, error) in
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
 
 
+## postGuidesTranscriptsDiscovery
+
+
+
+> [DiscoveryResponse](DiscoveryResponse) postGuidesTranscriptsDiscovery(body)
+
+Create a discovery job.
+
+
+
+Wraps POST /api/v2/guides/transcripts/discovery  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: DiscoveryRequest = new DiscoveryRequest(...) // 
+
+// Code example
+AIStudioAPI.postGuidesTranscriptsDiscovery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuidesTranscriptsDiscovery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DiscoveryRequest**](DiscoveryRequest)|  | |
+
+
+### Return type
+
+[**DiscoveryResponse**](DiscoveryResponse)
+
+
+## postGuidesTranscriptsSnapshotGenerate
+
+
+
+> [GenerateEntryResponse](GenerateEntryResponse) postGuidesTranscriptsSnapshotGenerate(snapshotId, body)
+
+Create a guide generation job.
+
+
+
+Wraps POST /api/v2/guides/transcripts/snapshots/{snapshotId}/generate  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let snapshotId: String = "" // Snapshot ID
+let body: GenerateEntryRequest = new GenerateEntryRequest(...) // 
+
+// Code example
+AIStudioAPI.postGuidesTranscriptsSnapshotGenerate(snapshotId: snapshotId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuidesTranscriptsSnapshotGenerate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| Snapshot ID | |
+| **body** | [**GenerateEntryRequest**](GenerateEntryRequest)|  | |
+
+
+### Return type
+
+[**GenerateEntryResponse**](GenerateEntryResponse)
+
+
 ## postGuidesUploads
 
 
@@ -1503,4 +1711,4 @@ AIStudioAPI.putConversationsSummariesSetting(summarySettingId: summarySettingId,
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

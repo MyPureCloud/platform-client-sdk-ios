@@ -4,18 +4,70 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAuthorizationCustomattributesItemtype**](ObjectsAPI#deleteAuthorizationCustomattributesItemtype) | Delete the default search criteria for an itemType. |
 | [**deleteAuthorizationDivision**](ObjectsAPI#deleteAuthorizationDivision) | Delete a division. |
+| [**getAuthorizationCustomattributesItemtype**](ObjectsAPI#getAuthorizationCustomattributesItemtype) | Get the default search criteria for an itemType. |
 | [**getAuthorizationDivision**](ObjectsAPI#getAuthorizationDivision) | Returns an authorization division. |
 | [**getAuthorizationDivisions**](ObjectsAPI#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
 | [**getAuthorizationDivisionsDeleted**](ObjectsAPI#getAuthorizationDivisionsDeleted) | Get a list of soft deleted divisions for the org |
 | [**getAuthorizationDivisionsHome**](ObjectsAPI#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
 | [**getAuthorizationDivisionsLimit**](ObjectsAPI#getAuthorizationDivisionsLimit) | Returns the maximum allowed number of divisions. |
 | [**getAuthorizationDivisionsQuery**](ObjectsAPI#getAuthorizationDivisionsQuery) | Retrieve a list of all divisions defined for the organization with cursor |
+| [**postAuthorizationCustomattributesItemtype**](ObjectsAPI#postAuthorizationCustomattributesItemtype) | Add a new default search criteria for an itemType. |
 | [**postAuthorizationDivisionObject**](ObjectsAPI#postAuthorizationDivisionObject) | Assign a list of objects to a division |
 | [**postAuthorizationDivisionRestore**](ObjectsAPI#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](ObjectsAPI#postAuthorizationDivisions) | Create a division. |
 | [**putAuthorizationDivision**](ObjectsAPI#putAuthorizationDivision) | Update a division. |
 {: class="table-striped"}
+
+
+## deleteAuthorizationCustomattributesItemtype
+
+
+
+> Void deleteAuthorizationCustomattributesItemtype(itemType)
+
+Delete the default search criteria for an itemType.
+
+
+
+Wraps DELETE /api/v2/authorization/customattributes/itemtypes/{itemType}  
+
+Requires ANY permissions: 
+
+* authorization:defaultSearchCriteria:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let itemType: ObjectsAPI.ItemType_deleteAuthorizationCustomattributesItemtype = ObjectsAPI.ItemType_deleteAuthorizationCustomattributesItemtype.enummember // Item Type
+
+// Code example
+ObjectsAPI.deleteAuthorizationCustomattributesItemtype(itemType: itemType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ObjectsAPI.deleteAuthorizationCustomattributesItemtype was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **itemType** | **String**| Item Type |<br />**Values**: conversation ("conversation"), transcript ("transcript"), evaluation ("evaluation"), workitem ("workitem") |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteAuthorizationDivision
@@ -67,6 +119,56 @@ ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (
 ### Return type
 
 `nil` (empty response body)
+
+
+## getAuthorizationCustomattributesItemtype
+
+
+
+> [AuthzDefaultSearchResponse](AuthzDefaultSearchResponse) getAuthorizationCustomattributesItemtype(itemType)
+
+Get the default search criteria for an itemType.
+
+
+
+Wraps GET /api/v2/authorization/customattributes/itemtypes/{itemType}  
+
+Requires ANY permissions: 
+
+* authorization:defaultSearchCriteria:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let itemType: ObjectsAPI.ItemType_getAuthorizationCustomattributesItemtype = ObjectsAPI.ItemType_getAuthorizationCustomattributesItemtype.enummember // Item Type
+
+// Code example
+ObjectsAPI.getAuthorizationCustomattributesItemtype(itemType: itemType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ObjectsAPI.getAuthorizationCustomattributesItemtype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **itemType** | **String**| Item Type |<br />**Values**: conversation ("conversation"), transcript ("transcript"), evaluation ("evaluation"), workitem ("workitem") |
+
+
+### Return type
+
+[**AuthzDefaultSearchResponse**](AuthzDefaultSearchResponse)
 
 
 ## getAuthorizationDivision
@@ -390,6 +492,58 @@ ObjectsAPI.getAuthorizationDivisionsQuery(before: before, after: after, pageSize
 [**AuthzDivisionCursorListing**](AuthzDivisionCursorListing)
 
 
+## postAuthorizationCustomattributesItemtype
+
+
+
+> [AuthzDefaultSearchResponse](AuthzDefaultSearchResponse) postAuthorizationCustomattributesItemtype(itemType, body)
+
+Add a new default search criteria for an itemType.
+
+
+
+Wraps POST /api/v2/authorization/customattributes/itemtypes/{itemType}  
+
+Requires ANY permissions: 
+
+* authorization:defaultSearchCriteria:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let itemType: ObjectsAPI.ItemType_postAuthorizationCustomattributesItemtype = ObjectsAPI.ItemType_postAuthorizationCustomattributesItemtype.enummember // Item Type
+let body: AuthzDefaultSearchRequest = new AuthzDefaultSearchRequest(...) // The custom attribute meta data object
+
+// Code example
+ObjectsAPI.postAuthorizationCustomattributesItemtype(itemType: itemType, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ObjectsAPI.postAuthorizationCustomattributesItemtype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **itemType** | **String**| Item Type |<br />**Values**: conversation ("conversation"), transcript ("transcript"), evaluation ("evaluation"), workitem ("workitem") |
+| **body** | [**AuthzDefaultSearchRequest**](AuthzDefaultSearchRequest)| The custom attribute meta data object | |
+
+
+### Return type
+
+[**AuthzDefaultSearchResponse**](AuthzDefaultSearchResponse)
+
+
 ## postAuthorizationDivisionObject
 
 
@@ -599,4 +753,4 @@ ObjectsAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { (respo
 [**AuthzDivision**](AuthzDivision)
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **transferType** | **String** | The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. | [optional] |
 | **keepInternalMessageAlive** | **Bool** | If true, the digital internal message will NOT be terminated. | [optional] |
+| **agentIndicatedAddress** | **String** | The agent indicated address of the transfer initiator. May override the address depending on trunk address priority. Only available for call conversations. | [optional] |
 | **userId** | **String** | The user ID of the transfer target. | [optional] |
 | **address** | **String** | The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication. | [optional] |
 | **userName** | **String** | The user name of the transfer target. | [optional] |
@@ -16,4 +17,4 @@
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

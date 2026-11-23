@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **dataActionId** | **String** | The ID of the data action to invoke at runtime to retrieve list values and synonyms. | |
 | **inputs** | [**[DataActionInput]**]([DataActionInput]) | Array of input mappings for the data action. Maps guide variables to data action input parameters. | [optional] |
-| **fieldMapping** | [**FieldMapping**](FieldMapping) |  | |
+| **fieldMapping** | [**FieldMapping**](FieldMapping) | Maps data action output fields to list values/synonyms. | |
 | **matchType** | **String** | Defines how matching should work at runtime. Only &#39;Exact&#39; matching is supported for dynamic lists. | |
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_

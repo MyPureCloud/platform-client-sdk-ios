@@ -9,6 +9,7 @@
 | **phoneNumber** | **String** | The phone number to dial. | [optional] |
 | **callerId** | **String** | The caller id phone number for this outbound call. | [optional] |
 | **callerIdName** | **String** | The caller id name for this outbound call. | [optional] |
+| **agentIndicatedAddress** | **String** | The caller id for this outbound call when the agent indicated override is configured. | [optional] |
 | **callFromQueueId** | **String** | The queue ID to call on behalf of. | [optional] |
 | **callQueueId** | **String** | The queue ID to call. | [optional] |
 | **callUserId** | **String** | The user ID to call. | [optional] |
@@ -25,4 +26,4 @@
 
 
 
-_PureCloudPlatformClientV2@208.0.0_
+_PureCloudPlatformClientV2@209.0.0_
